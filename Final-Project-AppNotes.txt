@@ -1,5 +1,5 @@
 Current Installation, for Background:
-    Octoprint (3D Printing Server):
+    Octoprint (3D Printing Server)
         https://github.com/foosel/OctoPrint
 
     MJPG Streamer (runs alongside Octoprint on Raspberry Pi)
@@ -7,6 +7,9 @@ Current Installation, for Background:
 
     Distribution of Octoprint, MJPG Streamer, and HAProxy for Raspberry Pi
         https://github.com/guysoft/OctoPi
+    
+    Enable Secure Access Octoprint via Basic Auth
+        https://printoid.net/access-octoprint-from-the-internet/
 
 === 
 
