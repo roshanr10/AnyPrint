@@ -10,7 +10,7 @@
         • View Actual/Target Temperatures of Bed/Hotend
         • View Current Printer Status
         • View Models saved to Disk
-            o Give option to commence printing
+            o Give option to print
     e.	Additional Features that would be Nice to Have:
         • View Time-lapses of Prior Prints
         • View Historical Statistics such as Print Time and Filament Usage
@@ -35,7 +35,7 @@
             To be used for storing printer configurations locally (See PrinterConfig in Data Models)
         • Remote Web-based API - Accessing Printer(s)
             Used for communicating with printer, API data will reflect target and current states, will be serialized into Swift objects (See Data Models)
-    c. Background tasks:
+    c. Background tasks off the Main Thread:
         • Poll for Printer State in Background
             Update temperature, camera feed, and printer status continually to ensure quick response as user browses the app.
     d. Custom views/images
@@ -49,38 +49,40 @@
         • Not as applicable for this type of app.
 
 4) Basic Data Models
-    • PrinterConfig
-        • Stored Locally on Device
-        • Properties:
-            • (URL)                     : Printer Address
-            • (CameraConfig)            : Camera Config
-            • (BasicAuthentication?)    : Printer HTTP Basic Auth
-            • (PrinterAuthentication?)  : Printer HTTP Access Control
-    • BasicAuthentication, only needed to get past wholly secured printers
-        • Stored Locally on Device as part of PrinterConfig Object
-        • Properties:
-            • (String) : HTTP Basic Auth Username
-            • (String) : HTTP Basic Auth Password 
-    • PrinterAuthentication, only needed for certain privileged operations
-        • Stored Locally on Device as part of PrinterConfig Object
-        • Properties:
-            • (String) : API Access Key
-    • CameraConfig, can be manually configured or use defaults
-        • Stored Locally on Device as part of PrinterConfig Object
-        • Properties:
-            • (URL)                     : Camera Address
-            • (BasicAuthentication?)    : Camera HTTP Basic Auth
-    • TemperatureData, shows current status of a tool
-        • Stored remotely on Printer, Serialized from JSON to Swift Data Model
-        • Fetched on regular interval, and sends global notification on change
-        • Properties:
-            • (Double) : Actual/Current Temperature
-            • (Double) : Target Temperature
-    • FileData, shows printable file
-        • Stored remotely on Printer, Serialized from JSON to Swift Data Model
-        • Properties:
-            • (String) : Name
-            • (String) : Path
-            • (String) : Origin
-        • Methods:
-            • (Void)   : print()
+    4.1) Local Data Models
+        • PrinterConfig
+            • Stored Locally on Device
+            • Properties:
+                • (URL)                     : Printer Address
+                • (CameraConfig)            : Camera Config
+                • (BasicAuthentication?)    : Printer HTTP Basic Auth
+                • (PrinterAuthentication?)  : Printer HTTP Access Control
+        • BasicAuthentication, only needed to get past wholly secured printers
+            • Stored Locally on Device as part of PrinterConfig Object
+            • Properties:
+                • (String) : HTTP Basic Auth Username
+                • (String) : HTTP Basic Auth Password 
+        • PrinterAuthentication, only needed for certain privileged operations
+            • Stored Locally on Device as part of PrinterConfig Object
+            • Properties:
+                • (String) : API Access Key
+        • CameraConfig, can be manually configured or use defaults
+            • Stored Locally on Device as part of PrinterConfig Object
+            • Properties:
+                • (URL)                     : Camera Address
+                • (BasicAuthentication?)    : Camera HTTP Basic Auth
+    4.2) Remote Data Models
+        • TemperatureData, shows current status of a tool
+            • Stored remotely on Printer, Serialized from JSON to Swift Data Model
+            • Fetched on regular interval, and sends global notification on change
+            • Properties:
+                • (Double) : Actual/Current Temperature
+                • (Double) : Target Temperature
+        • FileData, shows printable file
+            • Stored remotely on Printer, Serialized from JSON to Swift Data Model
+            • Properties:
+                • (String) : Name
+                • (String) : Path
+                • (String) : Origin
+            • Methods:
+                • (Void)   : print() : Selects and begins printing the file
