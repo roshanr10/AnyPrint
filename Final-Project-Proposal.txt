@@ -72,17 +72,31 @@
                 • (URL)                     : Camera Address
                 • (BasicAuthentication?)    : Camera HTTP Basic Auth
     4.2) Remote Data Models
-        • TemperatureData, shows current status of a tool
+        • PrinterState, shows current status of a tool
             • Stored remotely on Printer, Serialized from JSON to Swift Data Model
+                (http://docs.octoprint.org/en/master/api/printer.html#retrieve-the-current-printer-state)
             • Fetched on regular interval, and sends global notification on change
             • Properties:
+                • ([TemperatureData]) : Tool Temperature Data
+        • TemperatureData, shows current temperature of a tool
+            • Stored remotely on Printer, Serialized from JSON to Swift Data Model
+                (http://docs.octoprint.org/en/master/api/datamodel.html#temperature-data)
+            • Fetched on regular interval, and sends global notification on change
+            • Properties:
+                • (String) : Tool Name
                 • (Double) : Actual/Current Temperature
                 • (Double) : Target Temperature
-        • FileData, shows printable file
+        • PrintableFiles, shows printable files
             • Stored remotely on Printer, Serialized from JSON to Swift Data Model
+                (http://docs.octoprint.org/en/master/api/files.html#retrieve-all-files)
+            • Properties:
+                • ([PrintableFileData]) : Files
+        • PrintableFileData, shows printable file
+            • Stored remotely on Printer, Serialized from JSON to as part of PrintableFiles Data Model
             • Properties:
                 • (String) : Name
                 • (String) : Path
-                • (String) : Origin
+                • (String) : Location
             • Methods:
                 • (Void)   : print() : Selects and begins printing the file
+                    (http://docs.octoprint.org/en/master/api/files.html#issue-a-file-command)
