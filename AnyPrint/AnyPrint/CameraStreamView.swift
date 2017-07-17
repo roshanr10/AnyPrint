@@ -9,8 +9,6 @@
 import UIKit
 
 class CameraStreamView: UIView {
-    @IBOutlet weak var imageView: UIImageView!
-    
     // Ref: https://stackoverflow.com/questions/9282365/load-view-from-an-external-xib-file-in-storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
