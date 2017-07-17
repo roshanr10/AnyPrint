@@ -41,7 +41,7 @@
     d. Custom views/images
         • MJPEG Camera stream, live feed from 3D Printer Bed
             (https://github.com/freedom27/MjpegStreamingKit)
-        • Reusable UIViews
+        • Reusable UIViews, Ex:
             • TemperatureView for repeatedly shown Temperature Data
             • BasicAuthView for repeatedly used Authentication Input
             • MJPEGCameraStreamView to wrap camera streaming and loading symbol together for easy reuse
@@ -72,12 +72,28 @@
                 • (URL)                     : Camera Address
                 • (BasicAuthentication?)    : Camera HTTP Basic Auth
     4.2) Remote Data Models
-        • PrinterState, shows current status of a tool
+        • CurrentPrinterState, shows current status of a tool
             • Stored remotely on Printer, Serialized from JSON to Swift Data Model
                 (http://docs.octoprint.org/en/master/api/printer.html#retrieve-the-current-printer-state)
             • Fetched on regular interval, and sends global notification on change
             • Properties:
-                • ([TemperatureData]) : Tool Temperature Data
+                • ([TemperatureData])   : Tool Temperature Data
+                • (PrinterState)        : Current State of Printer
+                • (JobState?)           : Current State of Print Job, if Printing/Paused
+        • PrinterState
+            (http://docs.octoprint.org/en/master/api/datamodel.html#printer-state)
+            • Enum:
+                • Ready (operational)
+                • Printing (operational)
+                • Paused (operational)
+                • Error
+        • JobState, shows current status of a print job
+            (http://docs.octoprint.org/en/master/api/datamodel.html#job-information)
+            • Properties:
+                • (String) : File Name
+                • (Int)    : Print Time Spent
+                • (Int)    : Estimated Print Time Left
+                • (Double) : Estimated Percent Complete
         • TemperatureData, shows current temperature of a tool
             • Stored remotely on Printer, Serialized from JSON to Swift Data Model
                 (http://docs.octoprint.org/en/master/api/datamodel.html#temperature-data)
