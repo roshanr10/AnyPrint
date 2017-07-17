@@ -1,0 +1,19 @@
+Current Installation, for Background:
+    Octoprint (3D Printing Server):
+        https://github.com/foosel/OctoPrint
+
+    MJPG Streamer (runs alongside Octoprint on Raspberry Pi)
+        https://github.com/jacksonliam/mjpg-streamer
+
+    Distribution of Octoprint, MJPG Streamer, and HAProxy for Raspberry Pi
+        https://github.com/guysoft/OctoPi
+
+=== 
+
+Internet Servers:
+    Octoprint API (to remotely control printer from iOS)
+        http://docs.octoprint.org/en/master/api/index.html
+        
+Non-Apple Library iOS Code:
+    MjpegStreamingKit (to display MJPG live camera streams)
+        https://github.com/freedom27/MjpegStreamingKit
