@@ -125,7 +125,7 @@
         <scene sceneID="5Cl-Bq-5xz">
             <objects>
                 <navigationController id="aK1-N0-06z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Printers" image="printers" selectedImage="printers" id="n3p-Dq-xv7"/>
+                    <tabBarItem key="tabBarItem" title="Printers" image="printers" id="n3p-Dq-xv7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sbZ-wg-RN7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -174,7 +174,7 @@
                             <constraint firstItem="wob-Qi-evl" firstAttribute="top" secondItem="i7i-No-r5k" secondAttribute="bottom" constant="16" id="gZ6-FL-KWX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Overview" image="overview" selectedImage="overview" id="KYD-cc-NUL"/>
+                    <tabBarItem key="tabBarItem" title="Overview" image="overview" id="KYD-cc-NUL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijB-Ka-A0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -319,7 +319,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="cX7-gP-ACk" secondAttribute="trailing" constant="-16" id="bNE-jw-tG2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Control" image="control" selectedImage="control" id="rA6-zS-ewK"/>
+                    <tabBarItem key="tabBarItem" title="Control" image="control" id="rA6-zS-ewK"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDI-uU-jqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -330,7 +330,7 @@
         <scene sceneID="FZn-iX-yXh">
             <objects>
                 <navigationController id="KYJ-mg-EWi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Files" image="files" selectedImage="files" id="tsj-UM-OzT"/>
+                    <tabBarItem key="tabBarItem" title="Files" image="files" id="tsj-UM-OzT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bwP-qa-Oez">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
