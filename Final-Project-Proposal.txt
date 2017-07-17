@@ -1,0 +1,36 @@
+1)	High-Level Product Description
+    a.	Topic Area:
+        Print 3D Models from Anywhere
+    b.	Functional Scope:
+        Show real-time status of 3D printer by visualizing sensor data/camera stream. Allow browsing and printing of existing 3D models saved to disk.
+    c.	What makes it useful:
+        Allows 3D printing hobbyists to leave their printer physically unattended while they monitor its state remotely.
+    d.	Minimum Features for the App to Be Viable:
+        •	View Livestream of Printer Bed
+        •	View Actual/Target Temperatures of Bed/Hotend
+        •	View Current Printer Status
+        •	View Models saved to Disk
+            o	Give option to commence printing
+    e.	Additional Features that would be Nice to Have:
+        •	View Time-lapses of Prior Prints
+        •	Preheat printer for certain materials
+        •	Print models from online sources such as Thingiverse
+
+2) Kits and iOS Functionality Needed beyond UIKit
+    •	JSON API Calls for Access to 3D Printer
+    •	AVKit for displaying time-lapses
+3) Functionality
+    a. Navigation:
+        • UITabViewController
+    b. Persistence:
+        • NSUserDefaults for storing printer access 
+        • Remote Web-based API (printer)
+    c. Background tasks:
+        • Poll for Printer State in Bacground
+        
+    d. Custom views/images
+        • MPJEG Camera stream
+        • Reusable UI Views
+    e. Physical Sensing such as Acceleration or GPS
+        • Not Applicable
+4) Data Models
