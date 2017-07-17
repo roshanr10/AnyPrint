@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51770D921F1D5F880014271B /* CameraStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51770D911F1D5F880014271B /* CameraStreamView.swift */; };
 		5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195C28E1F1D46B00050DD92 /* AppDelegate.swift */; };
 		5195C2961F1D46B00050DD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2941F1D46B00050DD92 /* Main.storyboard */; };
 		5195C2981F1D46B00050DD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2971F1D46B00050DD92 /* Assets.xcassets */; };
 		5195C29B1F1D46B00050DD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2991F1D46B00050DD92 /* LaunchScreen.storyboard */; };
+		51A272E81F1D57DE00DF01ED /* CameraStreamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A272E71F1D57DE00DF01ED /* CameraStreamView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51770D911F1D5F880014271B /* CameraStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraStreamView.swift; sourceTree = "<group>"; };
 		5195C28B1F1D46B00050DD92 /* AnyPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5195C28E1F1D46B00050DD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5195C2951F1D46B00050DD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5195C2971F1D46B00050DD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5195C29A1F1D46B00050DD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5195C29C1F1D46B00050DD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51A272E71F1D57DE00DF01ED /* CameraStreamView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraStreamView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				5195C28E1F1D46B00050DD92 /* AppDelegate.swift */,
 				5195C2941F1D46B00050DD92 /* Main.storyboard */,
+				51770D911F1D5F880014271B /* CameraStreamView.swift */,
+				51A272E71F1D57DE00DF01ED /* CameraStreamView.xib */,
 				5195C2971F1D46B00050DD92 /* Assets.xcassets */,
 				5195C2991F1D46B00050DD92 /* LaunchScreen.storyboard */,
 				5195C29C1F1D46B00050DD92 /* Info.plist */,
@@ -123,6 +129,7 @@
 			files = (
 				5195C29B1F1D46B00050DD92 /* LaunchScreen.storyboard in Resources */,
 				5195C2981F1D46B00050DD92 /* Assets.xcassets in Resources */,
+				51A272E81F1D57DE00DF01ED /* CameraStreamView.xib in Resources */,
 				5195C2961F1D46B00050DD92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */,
+				51770D921F1D5F880014271B /* CameraStreamView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +306,7 @@
 				5195C2A11F1D46B00050DD92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
