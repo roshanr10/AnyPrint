@@ -163,30 +163,6 @@
                                     <constraint firstAttribute="width" constant="130" id="ptA-8L-c7U"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7W8-Zl-OQI" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
-                                <rect key="frame" x="16" y="203" width="343" height="21"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="tRF-JH-iD0"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Nozzle"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="207"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hn5-tE-Gxy" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
-                                <rect key="frame" x="16" y="240" width="343" height="21"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="nNB-mB-UIS"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Bed"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="53"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roshan's Prusa i3 MK2S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20b-Vs-rwy">
                                 <rect key="frame" x="156" y="90" width="203" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -199,35 +175,67 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ku0-dt-9dj">
+                                <rect key="frame" x="16" y="211" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7W8-Zl-OQI" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
+                                <rect key="frame" x="32" y="240" width="327" height="21"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="tRF-JH-iD0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Nozzle"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="207"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hn5-tE-Gxy" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
+                                <rect key="frame" x="32" y="269" width="327" height="21"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="nNB-mB-UIS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Bed"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="53"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0o-xf-4q0" customClass="CurrentPrintJobView" customModule="AnyPrint" customModuleProvider="target">
-                                <rect key="frame" x="16" y="438" width="343" height="180"/>
+                                <rect key="frame" x="16" y="306" width="343" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="AWI-cv-mWh"/>
+                                    <constraint firstAttribute="height" constant="220" id="AWI-cv-mWh"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="I0o-xf-4q0" firstAttribute="leading" secondItem="7W8-Zl-OQI" secondAttribute="leading" id="5CB-nq-9vR"/>
                             <constraint firstItem="wob-Qi-evl" firstAttribute="width" secondItem="wob-Qi-evl" secondAttribute="height" multiplier="4:3" id="6Jc-QK-5tU"/>
                             <constraint firstItem="XZo-iU-ZXT" firstAttribute="trailing" secondItem="20b-Vs-rwy" secondAttribute="trailing" id="6Ta-CP-UPW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i7i-No-r5k" secondAttribute="trailing" constant="-16" id="7Nt-jm-gHb"/>
-                            <constraint firstItem="BoA-GA-ZyK" firstAttribute="top" secondItem="I0o-xf-4q0" secondAttribute="bottom" id="CqD-sB-O1u"/>
-                            <constraint firstItem="7W8-Zl-OQI" firstAttribute="top" secondItem="wob-Qi-evl" secondAttribute="bottom" constant="25" id="EaU-TR-Dy7"/>
-                            <constraint firstItem="I0o-xf-4q0" firstAttribute="trailing" secondItem="hn5-tE-Gxy" secondAttribute="trailing" id="K9H-6b-NRB"/>
+                            <constraint firstItem="hn5-tE-Gxy" firstAttribute="leading" secondItem="7W8-Zl-OQI" secondAttribute="leading" id="7hJ-M4-lGM"/>
+                            <constraint firstItem="I0o-xf-4q0" firstAttribute="top" secondItem="hn5-tE-Gxy" secondAttribute="bottom" constant="16" id="FqM-lz-Xqg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hn5-tE-Gxy" secondAttribute="trailing" id="K2B-t6-aYZ"/>
                             <constraint firstItem="i7i-No-r5k" firstAttribute="top" secondItem="RyR-R6-KBt" secondAttribute="bottom" id="KL1-LH-gXv"/>
+                            <constraint firstItem="7W8-Zl-OQI" firstAttribute="top" secondItem="Ku0-dt-9dj" secondAttribute="bottom" constant="8" id="Nbk-wp-F34"/>
+                            <constraint firstItem="Ku0-dt-9dj" firstAttribute="leading" secondItem="7W8-Zl-OQI" secondAttribute="leading" constant="-16" id="OgD-ly-gbx"/>
+                            <constraint firstItem="hn5-tE-Gxy" firstAttribute="trailing" secondItem="7W8-Zl-OQI" secondAttribute="trailing" id="Ojq-6C-E8q"/>
                             <constraint firstItem="i7i-No-r5k" firstAttribute="leading" secondItem="0kJ-Zc-Yys" secondAttribute="leadingMargin" constant="-16" id="Rwp-jx-X4C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I0o-xf-4q0" secondAttribute="trailing" id="SEa-Dv-Rbi"/>
-                            <constraint firstItem="I0o-xf-4q0" firstAttribute="leading" secondItem="hn5-tE-Gxy" secondAttribute="leading" id="VOn-Da-2mH"/>
+                            <constraint firstItem="Ku0-dt-9dj" firstAttribute="leading" secondItem="0kJ-Zc-Yys" secondAttribute="leadingMargin" id="TT7-in-jhj"/>
+                            <constraint firstItem="I0o-xf-4q0" firstAttribute="leading" secondItem="0kJ-Zc-Yys" secondAttribute="leadingMargin" id="c4i-bW-vQ9"/>
                             <constraint firstItem="XZo-iU-ZXT" firstAttribute="centerY" secondItem="wob-Qi-evl" secondAttribute="centerY" constant="15" id="cse-iY-VCj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wob-Qi-evl" secondAttribute="leading" id="eju-8p-ZyS"/>
                             <constraint firstItem="wob-Qi-evl" firstAttribute="top" secondItem="i7i-No-r5k" secondAttribute="bottom" constant="16" id="gZ6-FL-KWX"/>
-                            <constraint firstItem="I0o-xf-4q0" firstAttribute="trailing" secondItem="7W8-Zl-OQI" secondAttribute="trailing" id="hwF-a5-UiZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="20b-Vs-rwy" secondAttribute="trailing" id="jDM-AB-LYc"/>
-                            <constraint firstItem="I0o-xf-4q0" firstAttribute="leading" secondItem="0kJ-Zc-Yys" secondAttribute="leadingMargin" id="pZp-sS-IEd"/>
                             <constraint firstItem="20b-Vs-rwy" firstAttribute="leading" secondItem="wob-Qi-evl" secondAttribute="trailing" constant="10" id="qWb-DX-MJh"/>
-                            <constraint firstItem="hn5-tE-Gxy" firstAttribute="top" secondItem="7W8-Zl-OQI" secondAttribute="bottom" constant="16" id="tfG-Ox-plf"/>
+                            <constraint firstItem="hn5-tE-Gxy" firstAttribute="top" secondItem="7W8-Zl-OQI" secondAttribute="bottom" constant="8" id="tfG-Ox-plf"/>
+                            <constraint firstItem="Ku0-dt-9dj" firstAttribute="top" secondItem="wob-Qi-evl" secondAttribute="bottom" constant="33" id="u07-2b-274"/>
                             <constraint firstItem="20b-Vs-rwy" firstAttribute="top" secondItem="wob-Qi-evl" secondAttribute="top" constant="10" id="x1T-dg-omZ"/>
                             <constraint firstItem="XZo-iU-ZXT" firstAttribute="leading" secondItem="20b-Vs-rwy" secondAttribute="leading" id="zXr-d4-IXw"/>
                         </constraints>
@@ -359,15 +367,8 @@
                                     <navigationItem title="Printer Control" id="yKH-j6-Yu3"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CR-Xf-aXI" customClass="MJPGCameraStreamView" customModule="AnyPrint" customModuleProvider="target">
-                                <rect key="frame" x="16" y="80" width="343" height="257.5"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1CR-Xf-aXI" secondAttribute="height" multiplier="4:3" id="QNO-5i-qGJ"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMN-xA-obC">
-                                <rect key="frame" x="16" y="503" width="343" height="40"/>
+                                <rect key="frame" x="16" y="481.5" width="343" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Kei-3b-VHE"/>
@@ -387,50 +388,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqh-yS-qFx">
-                                <rect key="frame" x="16" y="553" width="166.5" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="xyZ-zu-qOj"/>
-                                </constraints>
-                                <state key="normal" title="Stop Motors">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2i-IK-XOE">
-                                <rect key="frame" x="192.5" y="553" width="166.5" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="rjh-ff-FHQ"/>
-                                </constraints>
-                                <state key="normal" title="Stop Fans">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KS-z3-rmj">
-                                <rect key="frame" x="16" y="453" width="343" height="40"/>
+                                <rect key="frame" x="16" y="431.5" width="343" height="40"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.67843137254901964" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Z3V-Cp-sEg"/>
@@ -451,6 +410,55 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqh-yS-qFx">
+                                <rect key="frame" x="16" y="531.5" width="166.5" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xyZ-zu-qOj"/>
+                                </constraints>
+                                <state key="normal" title="Stop Motors">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2i-IK-XOE">
+                                <rect key="frame" x="192.5" y="531.5" width="166.5" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rjh-ff-FHQ"/>
+                                </constraints>
+                                <state key="normal" title="Stop Fans">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CR-Xf-aXI" customClass="MJPGCameraStreamView" customModule="AnyPrint" customModuleProvider="target">
+                                <rect key="frame" x="16" y="134" width="343" height="257.5"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1CR-Xf-aXI" secondAttribute="height" multiplier="4:3" id="QNO-5i-qGJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -460,15 +468,15 @@
                             <constraint firstItem="fqh-yS-qFx" firstAttribute="width" secondItem="s2i-IK-XOE" secondAttribute="width" id="6mD-jl-4dq"/>
                             <constraint firstItem="7KS-z3-rmj" firstAttribute="trailing" secondItem="jMN-xA-obC" secondAttribute="trailing" id="BFI-iO-dxO"/>
                             <constraint firstItem="cX7-gP-ACk" firstAttribute="leading" secondItem="ldt-ho-37u" secondAttribute="leadingMargin" constant="-16" id="Kzw-sQ-Pqq"/>
-                            <constraint firstItem="iqj-nQ-aU8" firstAttribute="top" secondItem="s2i-IK-XOE" secondAttribute="bottom" constant="25" id="LoD-y1-UcF"/>
                             <constraint firstItem="jMN-xA-obC" firstAttribute="top" secondItem="7KS-z3-rmj" secondAttribute="bottom" constant="10" id="NEb-MK-IPK"/>
                             <constraint firstAttribute="leadingMargin" secondItem="1CR-Xf-aXI" secondAttribute="leading" id="SZX-x7-QTd"/>
-                            <constraint firstItem="1CR-Xf-aXI" firstAttribute="top" secondItem="cX7-gP-ACk" secondAttribute="bottom" constant="16" id="Ta7-Np-DPB"/>
+                            <constraint firstItem="1CR-Xf-aXI" firstAttribute="top" secondItem="cX7-gP-ACk" secondAttribute="bottom" constant="70" id="Ta7-Np-DPB"/>
                             <constraint firstItem="s2i-IK-XOE" firstAttribute="leading" secondItem="fqh-yS-qFx" secondAttribute="trailing" constant="10" id="Yqd-uX-Vry"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cX7-gP-ACk" secondAttribute="trailing" constant="-16" id="bNE-jw-tG2"/>
                             <constraint firstItem="fqh-yS-qFx" firstAttribute="top" secondItem="jMN-xA-obC" secondAttribute="bottom" constant="10" id="bfu-Od-cIM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jMN-xA-obC" secondAttribute="trailing" id="dVQ-5M-x2W"/>
                             <constraint firstItem="7KS-z3-rmj" firstAttribute="leading" secondItem="jMN-xA-obC" secondAttribute="leading" id="hog-GU-01s"/>
+                            <constraint firstItem="7KS-z3-rmj" firstAttribute="top" secondItem="1CR-Xf-aXI" secondAttribute="bottom" constant="40" id="oKl-GQ-6an"/>
                             <constraint firstItem="fqh-yS-qFx" firstAttribute="leading" secondItem="jMN-xA-obC" secondAttribute="leading" id="pwq-0Y-rEb"/>
                             <constraint firstAttribute="leadingMargin" secondItem="jMN-xA-obC" secondAttribute="leading" id="ql2-ay-XZP"/>
                             <constraint firstItem="s2i-IK-XOE" firstAttribute="trailing" secondItem="jMN-xA-obC" secondAttribute="trailing" id="zGN-sb-c45"/>
