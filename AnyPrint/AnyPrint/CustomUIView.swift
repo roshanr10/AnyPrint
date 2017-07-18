@@ -8,7 +8,7 @@
 
 import UIKit
 
-// Derived from Ref: https://stackoverflow.com/documentation/ios/1362/custom-uiviews-from-xib-files#t=201707180225174542593
+// Derived from Ref: https://stackoverflow.com/documentation/ios/1362/custom-uiviews-from-xib-files/4443/wiring-elements#t=201707180244458065314
 @IBDesignable class CustomUIView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

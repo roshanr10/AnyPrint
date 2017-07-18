@@ -156,7 +156,7 @@
                                     <navigationItem title="Printer Status" id="MOH-w6-czw"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wob-Qi-evl" customClass="CameraStreamView" customModule="AnyPrint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wob-Qi-evl" customClass="MJPGCameraStreamView" customModule="AnyPrint" customModuleProvider="target">
                                 <rect key="frame" x="16" y="80" width="130" height="98"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -339,7 +339,7 @@
                                     <navigationItem title="Printer Control" id="yKH-j6-Yu3"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CR-Xf-aXI" customClass="CameraStreamView" customModule="AnyPrint" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CR-Xf-aXI" customClass="MJPGCameraStreamView" customModule="AnyPrint" customModuleProvider="target">
                                 <rect key="frame" x="16" y="100" width="343" height="257.5"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>

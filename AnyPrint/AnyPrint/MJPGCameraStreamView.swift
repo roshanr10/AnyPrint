@@ -8,4 +8,4 @@
 
 import UIKit
 
-class CameraStreamView: CustomUIView {}
+class MJPGCameraStreamView: CustomUIView {}

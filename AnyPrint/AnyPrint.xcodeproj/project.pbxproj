@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51770D921F1D5F880014271B /* CameraStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51770D911F1D5F880014271B /* CameraStreamView.swift */; };
+		51770D921F1D5F880014271B /* MJPGCameraStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51770D911F1D5F880014271B /* MJPGCameraStreamView.swift */; };
 		5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195C28E1F1D46B00050DD92 /* AppDelegate.swift */; };
 		5195C2961F1D46B00050DD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2941F1D46B00050DD92 /* Main.storyboard */; };
 		5195C2981F1D46B00050DD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2971F1D46B00050DD92 /* Assets.xcassets */; };
 		5195C29B1F1D46B00050DD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2991F1D46B00050DD92 /* LaunchScreen.storyboard */; };
-		51A272E81F1D57DE00DF01ED /* CameraStreamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A272E71F1D57DE00DF01ED /* CameraStreamView.xib */; };
+		51A272E81F1D57DE00DF01ED /* MJPGCameraStreamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A272E71F1D57DE00DF01ED /* MJPGCameraStreamView.xib */; };
 		51BA90071F1D721100718216 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA90061F1D721100718216 /* UIButton.swift */; };
 		51BA900C1F1D8F0C00718216 /* ToolTemperatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA900B1F1D8F0C00718216 /* ToolTemperatureView.xib */; };
 		51BA900F1F1D934100718216 /* ToolTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA900E1F1D934100718216 /* ToolTemperatureView.swift */; };
@@ -20,14 +20,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		51770D911F1D5F880014271B /* CameraStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraStreamView.swift; sourceTree = "<group>"; };
+		51770D911F1D5F880014271B /* MJPGCameraStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJPGCameraStreamView.swift; sourceTree = "<group>"; };
 		5195C28B1F1D46B00050DD92 /* AnyPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5195C28E1F1D46B00050DD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5195C2951F1D46B00050DD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5195C2971F1D46B00050DD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5195C29A1F1D46B00050DD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5195C29C1F1D46B00050DD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51A272E71F1D57DE00DF01ED /* CameraStreamView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraStreamView.xib; sourceTree = "<group>"; };
+		51A272E71F1D57DE00DF01ED /* MJPGCameraStreamView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJPGCameraStreamView.xib; sourceTree = "<group>"; };
 		51BA90061F1D721100718216 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		51BA900B1F1D8F0C00718216 /* ToolTemperatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolTemperatureView.xib; sourceTree = "<group>"; };
 		51BA900E1F1D934100718216 /* ToolTemperatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolTemperatureView.swift; sourceTree = "<group>"; };
@@ -80,18 +80,18 @@
 				51BA90121F1DAA4B00718216 /* Custom UI View */,
 				51BA900A1F1D8ECD00718216 /* UIButton */,
 				51BA900D1F1D932A00718216 /* ToolTemperatureView */,
-				51BA90091F1D8EC200718216 /* CameraStreamView */,
+				51BA90091F1D8EC200718216 /* MJPGCameraStreamView */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
 		};
-		51BA90091F1D8EC200718216 /* CameraStreamView */ = {
+		51BA90091F1D8EC200718216 /* MJPGCameraStreamView */ = {
 			isa = PBXGroup;
 			children = (
-				51770D911F1D5F880014271B /* CameraStreamView.swift */,
-				51A272E71F1D57DE00DF01ED /* CameraStreamView.xib */,
+				51770D911F1D5F880014271B /* MJPGCameraStreamView.swift */,
+				51A272E71F1D57DE00DF01ED /* MJPGCameraStreamView.xib */,
 			);
-			name = CameraStreamView;
+			name = MJPGCameraStreamView;
 			sourceTree = "<group>";
 		};
 		51BA900A1F1D8ECD00718216 /* UIButton */ = {
@@ -181,7 +181,7 @@
 			files = (
 				5195C29B1F1D46B00050DD92 /* LaunchScreen.storyboard in Resources */,
 				5195C2981F1D46B00050DD92 /* Assets.xcassets in Resources */,
-				51A272E81F1D57DE00DF01ED /* CameraStreamView.xib in Resources */,
+				51A272E81F1D57DE00DF01ED /* MJPGCameraStreamView.xib in Resources */,
 				5195C2961F1D46B00050DD92 /* Main.storyboard in Resources */,
 				51BA900C1F1D8F0C00718216 /* ToolTemperatureView.xib in Resources */,
 			);
@@ -195,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */,
-				51770D921F1D5F880014271B /* CameraStreamView.swift in Sources */,
+				51770D921F1D5F880014271B /* MJPGCameraStreamView.swift in Sources */,
 				51BA90111F1DA9A500718216 /* CustomUIView.swift in Sources */,
 				51BA90071F1D721100718216 /* UIButton.swift in Sources */,
 				51BA900F1F1D934100718216 /* ToolTemperatureView.swift in Sources */,
