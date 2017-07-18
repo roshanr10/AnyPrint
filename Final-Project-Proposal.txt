@@ -68,6 +68,7 @@
                 • (String) : API Access Key
         • CameraConfig, can be manually configured or use defaults
             • Stored Locally on Device as part of PrinterConfig Object
+            • Will initially be identical to printer auth
             • Properties:
                 • (URL)                     : Camera Address
                 • (BasicAuthentication?)    : Camera HTTP Basic Auth
