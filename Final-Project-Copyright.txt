@@ -1,3 +1,0 @@
-Tab Bar Icons from Font Awesome: tachometer, gamepad, folder-open, printer
-    http://fontawesome.io/license/
-    'Attribution is no longer required as of Font Awesome 3.0'
