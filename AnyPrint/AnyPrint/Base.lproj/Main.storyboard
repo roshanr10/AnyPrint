@@ -168,7 +168,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Hotend"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Nozzle"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="207"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
                                 </userDefinedRuntimeAttributes>
@@ -178,20 +178,38 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Bed Heat"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Bed"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="53"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roshan's Prusa i3 MK2S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20b-Vs-rwy">
+                                <rect key="frame" x="156" y="90" width="203" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Operational" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZo-iU-ZXT">
+                                <rect key="frame" x="156" y="126.5" width="203" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wob-Qi-evl" firstAttribute="width" secondItem="wob-Qi-evl" secondAttribute="height" multiplier="4:3" id="6Jc-QK-5tU"/>
+                            <constraint firstItem="XZo-iU-ZXT" firstAttribute="trailing" secondItem="20b-Vs-rwy" secondAttribute="trailing" id="6Ta-CP-UPW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i7i-No-r5k" secondAttribute="trailing" constant="-16" id="7Nt-jm-gHb"/>
                             <constraint firstItem="i7i-No-r5k" firstAttribute="top" secondItem="RyR-R6-KBt" secondAttribute="bottom" id="KL1-LH-gXv"/>
                             <constraint firstItem="i7i-No-r5k" firstAttribute="leading" secondItem="0kJ-Zc-Yys" secondAttribute="leadingMargin" constant="-16" id="Rwp-jx-X4C"/>
+                            <constraint firstItem="XZo-iU-ZXT" firstAttribute="centerY" secondItem="wob-Qi-evl" secondAttribute="centerY" constant="15" id="cse-iY-VCj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wob-Qi-evl" secondAttribute="leading" id="eju-8p-ZyS"/>
                             <constraint firstItem="wob-Qi-evl" firstAttribute="top" secondItem="i7i-No-r5k" secondAttribute="bottom" constant="16" id="gZ6-FL-KWX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="20b-Vs-rwy" secondAttribute="trailing" id="jDM-AB-LYc"/>
+                            <constraint firstItem="20b-Vs-rwy" firstAttribute="leading" secondItem="wob-Qi-evl" secondAttribute="trailing" constant="10" id="qWb-DX-MJh"/>
+                            <constraint firstItem="20b-Vs-rwy" firstAttribute="top" secondItem="wob-Qi-evl" secondAttribute="top" constant="10" id="x1T-dg-omZ"/>
+                            <constraint firstItem="XZo-iU-ZXT" firstAttribute="leading" secondItem="20b-Vs-rwy" secondAttribute="leading" id="zXr-d4-IXw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" image="overview" id="KYD-cc-NUL"/>
