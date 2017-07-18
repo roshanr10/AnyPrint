@@ -41,7 +41,7 @@
     d. Custom views/images
         • MJPEG Camera stream, live feed from 3D Printer Bed
             (https://github.com/freedom27/MjpegStreamingKit)
-        • Reusable UIViews, Ex:
+        • Reusable UIViews, also allows for easier importing data from models - Ex:
             • TemperatureView for repeatedly shown Temperature Data
             • BasicAuthView for repeatedly used Authentication Input
             • MJPEGCameraStreamView to wrap camera streaming and loading symbol together for easy reuse
