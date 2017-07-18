@@ -95,18 +95,21 @@
                 • (Int)    : Print Time Spent
                 • (Int)    : Estimated Print Time Left
                 • (Double) : Estimated Percent Complete
-        • PrintableFiles, shows printable files
+        • PrintableModels, shows printable models
             • Stored remotely on Printer, Serialized from JSON to Swift Data Model
                 (http://docs.octoprint.org/en/master/api/files.html#retrieve-all-files)
             • Properties:
                 • ([PrintableFileData]) : Files
             • Methods:
                 • (Void)   : reloadData() : reloads files from printer
-        • PrintableFileData, shows printable file
+        • PrintableModelData, shows printable model
             • Properties:
-                • (String) : Name
-                • (String) : Path
-                • (String) : Location
+                • (String)  : Name
+                • (String)  : Path
+                • (String)  : Location
+                • (String)  : File Type
+                • (Integer) : Size (bytes)
+                • (Integer) : Upload Date (UNIX timestamp)
             • Methods:
                 • (Void)   : print() : Selects and begins printing the file
                     (http://docs.octoprint.org/en/master/api/files.html#issue-a-file-command)
