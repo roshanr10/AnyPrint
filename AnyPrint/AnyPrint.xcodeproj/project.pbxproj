@@ -19,6 +19,8 @@
 		51BA90111F1DA9A500718216 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA90101F1DA9A500718216 /* CustomUIView.swift */; };
 		51BA90151F1DB48700718216 /* CurrentPrintJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA90141F1DB48700718216 /* CurrentPrintJobView.swift */; };
 		51BA90171F1DB49500718216 /* CurrentPrintJobView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA90161F1DB49500718216 /* CurrentPrintJobView.xib */; };
+		51BA901A1F1DBDF000718216 /* PrintableModelDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA90191F1DBDF000718216 /* PrintableModelDataView.xib */; };
+		51BA901C1F1DBDFE00718216 /* PrintableModelDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA901B1F1DBDFE00718216 /* PrintableModelDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		51BA90101F1DA9A500718216 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		51BA90141F1DB48700718216 /* CurrentPrintJobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentPrintJobView.swift; sourceTree = "<group>"; };
 		51BA90161F1DB49500718216 /* CurrentPrintJobView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentPrintJobView.xib; sourceTree = "<group>"; };
+		51BA90191F1DBDF000718216 /* PrintableModelDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrintableModelDataView.xib; sourceTree = "<group>"; };
+		51BA901B1F1DBDFE00718216 /* PrintableModelDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintableModelDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				51BA900D1F1D932A00718216 /* ToolTemperatureView */,
 				51BA90131F1DB45300718216 /* CurrentPrintJobView */,
 				51BA90091F1D8EC200718216 /* MJPGCameraStreamView */,
+				51BA90181F1DBDC000718216 /* PrintableModelData */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -131,6 +136,15 @@
 				51BA90161F1DB49500718216 /* CurrentPrintJobView.xib */,
 			);
 			name = CurrentPrintJobView;
+			sourceTree = "<group>";
+		};
+		51BA90181F1DBDC000718216 /* PrintableModelData */ = {
+			isa = PBXGroup;
+			children = (
+				51BA901B1F1DBDFE00718216 /* PrintableModelDataView.swift */,
+				51BA90191F1DBDF000718216 /* PrintableModelDataView.xib */,
+			);
+			name = PrintableModelData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +210,7 @@
 				5195C29B1F1D46B00050DD92 /* LaunchScreen.storyboard in Resources */,
 				5195C2981F1D46B00050DD92 /* Assets.xcassets in Resources */,
 				51BA90171F1DB49500718216 /* CurrentPrintJobView.xib in Resources */,
+				51BA901A1F1DBDF000718216 /* PrintableModelDataView.xib in Resources */,
 				51A272E81F1D57DE00DF01ED /* MJPGCameraStreamView.xib in Resources */,
 				5195C2961F1D46B00050DD92 /* Main.storyboard in Resources */,
 				51BA900C1F1D8F0C00718216 /* ToolTemperatureView.xib in Resources */,
@@ -215,6 +230,7 @@
 				51BA90071F1D721100718216 /* UIButton.swift in Sources */,
 				51BA90151F1DB48700718216 /* CurrentPrintJobView.swift in Sources */,
 				51BA900F1F1D934100718216 /* ToolTemperatureView.swift in Sources */,
+				51BA901C1F1DBDFE00718216 /* PrintableModelDataView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
