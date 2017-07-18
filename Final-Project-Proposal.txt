@@ -78,7 +78,7 @@
             • Fetched on regular interval, and sends global notification on change
             • Properties:
                 • ([TemperatureData])   : Tool Temperature Data
-                • (PrinterState)        : Current State of Printer
+                • (String)        : Current State of Printer
                 • (JobState?)           : Current State of Print Job, if Printing/Paused
             • Methods:
                 • (Void)   : reloadData() : reloads state from printer, to be called from background tasks off the main thread
@@ -88,13 +88,6 @@
                 • (String) : Tool Name
                 • (Double) : Actual/Current Temperature
                 • (Double) : Target Temperature
-        • PrinterState, shows current status of a printer
-            (http://docs.octoprint.org/en/master/api/datamodel.html#printer-state)
-            • Enum:
-                • Ready (operational)
-                • Printing (operational)
-                • Paused (operational)
-                • Error
         • JobState, shows current status of a print job
             (http://docs.octoprint.org/en/master/api/datamodel.html#job-information)
             • Properties:
