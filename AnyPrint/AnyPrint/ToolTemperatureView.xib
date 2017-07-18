@@ -9,7 +9,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
+            <connections>
+                <outlet property="actualTempLabel" destination="XVf-Ep-RfK" id="KIf-gj-my5"/>
+                <outlet property="actualTempUnitLabel" destination="b2A-Ss-v6R" id="FRf-Gs-BWM"/>
+                <outlet property="targetTempLabel" destination="Iax-9R-M3K" id="xJA-Nu-6Ld"/>
+                <outlet property="targetTempUnitLabel" destination="tzS-Ue-G5d" id="Ol2-da-iCn"/>
+                <outlet property="toolNameLabel" destination="abm-bF-eAN" id="A0t-4X-at4"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>

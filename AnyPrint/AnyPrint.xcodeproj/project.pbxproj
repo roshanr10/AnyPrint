@@ -16,6 +16,7 @@
 		51BA90071F1D721100718216 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA90061F1D721100718216 /* UIButton.swift */; };
 		51BA900C1F1D8F0C00718216 /* ToolTemperatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA900B1F1D8F0C00718216 /* ToolTemperatureView.xib */; };
 		51BA900F1F1D934100718216 /* ToolTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA900E1F1D934100718216 /* ToolTemperatureView.swift */; };
+		51BA90111F1DA9A500718216 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA90101F1DA9A500718216 /* CustomUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		51BA90061F1D721100718216 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		51BA900B1F1D8F0C00718216 /* ToolTemperatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolTemperatureView.xib; sourceTree = "<group>"; };
 		51BA900E1F1D934100718216 /* ToolTemperatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolTemperatureView.swift; sourceTree = "<group>"; };
+		51BA90101F1DA9A500718216 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,9 @@
 		51BA90081F1D8EB400718216 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				51BA900D1F1D932A00718216 /* ToolTemperatureView */,
+				51BA90121F1DAA4B00718216 /* Custom UI View */,
 				51BA900A1F1D8ECD00718216 /* UIButton */,
+				51BA900D1F1D932A00718216 /* ToolTemperatureView */,
 				51BA90091F1D8EC200718216 /* CameraStreamView */,
 			);
 			name = "Custom Views";
@@ -106,6 +109,14 @@
 				51BA900B1F1D8F0C00718216 /* ToolTemperatureView.xib */,
 			);
 			name = ToolTemperatureView;
+			sourceTree = "<group>";
+		};
+		51BA90121F1DAA4B00718216 /* Custom UI View */ = {
+			isa = PBXGroup;
+			children = (
+				51BA90101F1DA9A500718216 /* CustomUIView.swift */,
+			);
+			name = "Custom UI View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 			files = (
 				5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */,
 				51770D921F1D5F880014271B /* CameraStreamView.swift in Sources */,
+				51BA90111F1DA9A500718216 /* CustomUIView.swift in Sources */,
 				51BA90071F1D721100718216 /* UIButton.swift in Sources */,
 				51BA900F1F1D934100718216 /* ToolTemperatureView.swift in Sources */,
 			);

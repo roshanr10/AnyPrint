@@ -167,11 +167,21 @@
                                 <rect key="frame" x="16" y="203" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Hotend"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="207"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hn5-tE-Gxy" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
                                 <rect key="frame" x="16" y="240" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Bed Heat"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="53"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

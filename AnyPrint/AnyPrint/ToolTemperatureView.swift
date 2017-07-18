@@ -8,15 +8,47 @@
 
 import UIKit
 
-class ToolTemperatureView: UIView {
-    // Ref: https://stackoverflow.com/questions/9282365/load-view-from-an-external-xib-file-in-storyboard
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        let view = Bundle.main.loadNibNamed("ToolTemperatureView", owner: self, options: nil)!.first as! UIView
-        
-        self.addSubview(view)
-        view.frame = self.bounds
+@IBDesignable class ToolTemperatureView: CustomUIView {
+    @IBOutlet weak var toolNameLabel: UILabel!
+    @IBOutlet weak var actualTempLabel: UILabel!
+    @IBOutlet weak var targetTempLabel: UILabel!
+    @IBOutlet weak var actualTempUnitLabel: UILabel!
+    @IBOutlet weak var targetTempUnitLabel: UILabel!
+    
+    @IBInspectable var toolName: String? {
+        set {
+            toolNameLabel.text = newValue
+        }
+        get {
+            return toolNameLabel.text
+        }
     }
-
+    
+    @IBInspectable var actualTemp: String? {
+        set {
+            actualTempLabel.text = newValue
+        }
+        get {
+            return actualTempLabel.text
+        }
+    }
+    
+    @IBInspectable var targetTemp: String? {
+        set {
+            targetTempLabel.text = newValue
+        }
+        get {
+            return targetTempLabel.text
+        }
+    }
+    
+    @IBInspectable var tempUnit: String? {
+        set {
+            actualTempUnitLabel.text = newValue
+            targetTempUnitLabel.text = newValue
+        }
+        get {
+            return actualTempUnitLabel.text
+        }
+    }
 }
