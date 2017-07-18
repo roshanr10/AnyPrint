@@ -153,7 +153,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7i-No-r5k">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Roshan's Prusa i3 MK2S" id="MOH-w6-czw"/>
+                                    <navigationItem title="Printer Status" id="MOH-w6-czw"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wob-Qi-evl" customClass="CameraStreamView" customModule="AnyPrint" customModuleProvider="target">
@@ -162,6 +162,16 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="ptA-8L-c7U"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7W8-Zl-OQI" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
+                                <rect key="frame" x="16" y="203" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hn5-tE-Gxy" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
+                                <rect key="frame" x="16" y="240" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -298,25 +308,122 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cX7-gP-ACk">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Roshan's Prusa i3 MK2S" id="yKH-j6-Yu3"/>
+                                    <navigationItem title="Printer Control" id="yKH-j6-Yu3"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CR-Xf-aXI" customClass="CameraStreamView" customModule="AnyPrint" customModuleProvider="target">
-                                <rect key="frame" x="16" y="80" width="343" height="257.5"/>
+                                <rect key="frame" x="16" y="100" width="343" height="257.5"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1CR-Xf-aXI" secondAttribute="height" multiplier="4:3" id="QNO-5i-qGJ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMN-xA-obC">
+                                <rect key="frame" x="16" y="443" width="343" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Kei-3b-VHE"/>
+                                </constraints>
+                                <state key="normal" title="Stop Print">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqh-yS-qFx">
+                                <rect key="frame" x="16" y="498" width="343" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xyZ-zu-qOj"/>
+                                </constraints>
+                                <state key="normal" title="Stop Motors">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2i-IK-XOE">
+                                <rect key="frame" x="16" y="553" width="343" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rjh-ff-FHQ"/>
+                                </constraints>
+                                <state key="normal" title="Stop Fans">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KS-z3-rmj">
+                                <rect key="frame" x="16" y="388" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.67843137254901964" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Z3V-Cp-sEg"/>
+                                </constraints>
+                                <state key="normal" title="Pause Print">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="1CR-Xf-aXI" secondAttribute="trailing" id="4P7-1w-jXI"/>
                             <constraint firstItem="cX7-gP-ACk" firstAttribute="top" secondItem="BCO-vb-lTv" secondAttribute="bottom" id="5i8-iu-zk2"/>
+                            <constraint firstItem="7KS-z3-rmj" firstAttribute="trailing" secondItem="jMN-xA-obC" secondAttribute="trailing" id="BFI-iO-dxO"/>
+                            <constraint firstItem="fqh-yS-qFx" firstAttribute="trailing" secondItem="jMN-xA-obC" secondAttribute="trailing" id="Bw3-Uy-UeR"/>
+                            <constraint firstItem="s2i-IK-XOE" firstAttribute="top" secondItem="fqh-yS-qFx" secondAttribute="bottom" constant="15" id="K6V-4G-CtP"/>
                             <constraint firstItem="cX7-gP-ACk" firstAttribute="leading" secondItem="ldt-ho-37u" secondAttribute="leadingMargin" constant="-16" id="Kzw-sQ-Pqq"/>
+                            <constraint firstItem="iqj-nQ-aU8" firstAttribute="top" secondItem="s2i-IK-XOE" secondAttribute="bottom" constant="25" id="LoD-y1-UcF"/>
+                            <constraint firstItem="jMN-xA-obC" firstAttribute="top" secondItem="7KS-z3-rmj" secondAttribute="bottom" constant="15" id="NEb-MK-IPK"/>
                             <constraint firstAttribute="leadingMargin" secondItem="1CR-Xf-aXI" secondAttribute="leading" id="SZX-x7-QTd"/>
-                            <constraint firstItem="1CR-Xf-aXI" firstAttribute="top" secondItem="cX7-gP-ACk" secondAttribute="bottom" constant="16" id="Ta7-Np-DPB"/>
+                            <constraint firstItem="1CR-Xf-aXI" firstAttribute="top" secondItem="cX7-gP-ACk" secondAttribute="bottom" constant="36" id="Ta7-Np-DPB"/>
+                            <constraint firstItem="s2i-IK-XOE" firstAttribute="leading" secondItem="jMN-xA-obC" secondAttribute="leading" id="UgZ-v4-QO7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cX7-gP-ACk" secondAttribute="trailing" constant="-16" id="bNE-jw-tG2"/>
+                            <constraint firstItem="fqh-yS-qFx" firstAttribute="top" secondItem="jMN-xA-obC" secondAttribute="bottom" constant="15" id="bfu-Od-cIM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jMN-xA-obC" secondAttribute="trailing" id="dVQ-5M-x2W"/>
+                            <constraint firstItem="7KS-z3-rmj" firstAttribute="leading" secondItem="jMN-xA-obC" secondAttribute="leading" id="hog-GU-01s"/>
+                            <constraint firstItem="fqh-yS-qFx" firstAttribute="leading" secondItem="jMN-xA-obC" secondAttribute="leading" id="pwq-0Y-rEb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jMN-xA-obC" secondAttribute="leading" id="ql2-ay-XZP"/>
+                            <constraint firstItem="s2i-IK-XOE" firstAttribute="trailing" secondItem="jMN-xA-obC" secondAttribute="trailing" id="zGN-sb-c45"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Control" image="control" id="rA6-zS-ewK"/>
