@@ -148,6 +148,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Saved Printers" id="uYi-Da-jgk">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="STh-gx-r8e"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="PTe-Z7-Oo0"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BPL-kn-kP2">
                             <connections>
                                 <segue destination="EZ1-AR-51l" kind="show" id="uk0-yg-FuY"/>
@@ -363,7 +365,9 @@
                             <outlet property="delegate" destination="qjc-ZN-hy8" id="Bb4-Sn-zJb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Saved Models" id="GVa-sf-oVB"/>
+                    <navigationItem key="navigationItem" title="Saved Models" id="GVa-sf-oVB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="nNb-qn-lrU"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOm-Bg-wY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -380,12 +384,57 @@
                     <view key="view" contentMode="scaleToFill" id="2Th-Ge-uS9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="octopi.local" borderStyle="roundedRect" placeholder="OctoPrint Instance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffo-4e-0eR">
+                                <rect key="frame" x="140" y="77" width="219" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzP-pU-g53">
+                                <rect key="frame" x="16" y="80" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dr8-f2-KX9">
+                                <rect key="frame" x="140" y="114" width="219" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPE-v5-TBS">
+                                <rect key="frame" x="16" y="117" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ffo-4e-0eR" firstAttribute="leading" secondItem="PzP-pU-g53" secondAttribute="trailing" constant="20" id="2by-hd-DZH"/>
+                            <constraint firstItem="dr8-f2-KX9" firstAttribute="trailing" secondItem="ffo-4e-0eR" secondAttribute="trailing" id="3V2-3P-AIB"/>
+                            <constraint firstItem="gPE-v5-TBS" firstAttribute="trailing" secondItem="PzP-pU-g53" secondAttribute="trailing" id="8sI-Fp-yXN"/>
+                            <constraint firstItem="ffo-4e-0eR" firstAttribute="baseline" secondItem="PzP-pU-g53" secondAttribute="baseline" id="9ci-Ul-498"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="PzP-pU-g53" secondAttribute="leading" id="Jqy-20-Rmr"/>
+                            <constraint firstItem="dr8-f2-KX9" firstAttribute="leading" secondItem="ffo-4e-0eR" secondAttribute="leading" id="YgJ-P6-elX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ffo-4e-0eR" secondAttribute="trailing" id="cMR-rC-chU"/>
+                            <constraint firstItem="gPE-v5-TBS" firstAttribute="top" secondItem="PzP-pU-g53" secondAttribute="bottom" constant="16" id="d1n-rg-GTX"/>
+                            <constraint firstItem="dr8-f2-KX9" firstAttribute="leading" secondItem="gPE-v5-TBS" secondAttribute="trailing" constant="20" id="muE-5C-pE8"/>
+                            <constraint firstItem="dr8-f2-KX9" firstAttribute="baseline" secondItem="gPE-v5-TBS" secondAttribute="baseline" id="o2K-xx-2By"/>
+                            <constraint firstItem="gPE-v5-TBS" firstAttribute="leading" secondItem="PzP-pU-g53" secondAttribute="leading" id="qyV-w4-UDK"/>
+                            <constraint firstItem="PzP-pU-g53" firstAttribute="top" secondItem="x6p-eR-oRB" secondAttribute="bottom" constant="16" id="rG7-Zu-89H"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="KxW-jS-JJa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7Y2-Hi-6T3"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qU1-PC-s5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2649" y="645"/>
+            <point key="canvasLocation" x="2648.8000000000002" y="644.52773613193403"/>
         </scene>
         <!--Control-->
         <scene sceneID="wul-0a-l4y">
