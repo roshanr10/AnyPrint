@@ -53,6 +53,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5129254A1F28012800FA07A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5129254B1F28013C00FA07A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		5195C2821F1D46B00050DD92 = {
 			isa = PBXGroup;
 			children = (
@@ -73,8 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				5195C28E1F1D46B00050DD92 /* AppDelegate.swift */,
-				5195C2941F1D46B00050DD92 /* Main.storyboard */,
-				51BA90081F1D8EB400718216 /* Custom Views */,
+				5129254A1F28012800FA07A6 /* Models */,
+				51BA90081F1D8EB400718216 /* Views */,
+				5129254B1F28013C00FA07A6 /* Controllers */,
 				5195C2971F1D46B00050DD92 /* Assets.xcassets */,
 				5195C2991F1D46B00050DD92 /* LaunchScreen.storyboard */,
 				5195C29C1F1D46B00050DD92 /* Info.plist */,
@@ -82,9 +97,10 @@
 			path = AnyPrint;
 			sourceTree = "<group>";
 		};
-		51BA90081F1D8EB400718216 /* Custom Views */ = {
+		51BA90081F1D8EB400718216 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5195C2941F1D46B00050DD92 /* Main.storyboard */,
 				51BA90121F1DAA4B00718216 /* Custom UI View */,
 				51BA900A1F1D8ECD00718216 /* UIButton */,
 				51BA900D1F1D932A00718216 /* ToolTemperatureView */,
@@ -92,7 +108,7 @@
 				51BA90091F1D8EC200718216 /* MJPGCameraStreamView */,
 				51BA90181F1DBDC000718216 /* PrintableModelData */,
 			);
-			name = "Custom Views";
+			name = Views;
 			sourceTree = "<group>";
 		};
 		51BA90091F1D8EC200718216 /* MJPGCameraStreamView */ = {
