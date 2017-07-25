@@ -16,30 +16,18 @@ import UIKit
     @IBOutlet weak var targetTempUnitLabel: UILabel!
     
     @IBInspectable var toolName: String? {
-        set {
-            toolNameLabel.text = newValue
-        }
-        get {
-            return toolNameLabel.text
-        }
+        set { toolNameLabel.text = newValue }
+        get { return toolNameLabel.text }
     }
     
     @IBInspectable var actualTemp: String? {
-        set {
-            actualTempLabel.text = newValue
-        }
-        get {
-            return actualTempLabel.text
-        }
+        set { actualTempLabel.text = newValue }
+        get { return actualTempLabel.text }
     }
     
     @IBInspectable var targetTemp: String? {
-        set {
-            targetTempLabel.text = newValue
-        }
-        get {
-            return targetTempLabel.text
-        }
+        set { targetTempLabel.text = newValue }
+        get { return targetTempLabel.text }
     }
     
     @IBInspectable var tempUnit: String? {
@@ -47,8 +35,6 @@ import UIKit
             actualTempUnitLabel.text = newValue
             targetTempUnitLabel.text = newValue
         }
-        get {
-            return actualTempUnitLabel.text
-        }
+        get { return actualTempUnitLabel.text }
     }
 }
