@@ -9,7 +9,7 @@
 import Foundation
 
 class PrinterConfig: NSObject, NSCoding {
-    var url: String
+    var url: URL
     var camera: CameraConfig
     var auth: PrinterAuth
     
@@ -19,14 +19,14 @@ class PrinterConfig: NSObject, NSCoding {
         static let auth = "auth"
     }
     
-    init(url: String, camera: CameraConfig, auth: PrinterAuth){
+    init(url: URL, camera: CameraConfig, auth: PrinterAuth){
         self.url = url
         self.camera = camera
         self.auth = auth
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        guard let url = aDecoder.decodeObject(forKey: PropertyKey.url) as? String else { return nil }
+        guard let url = aDecoder.decodeObject(forKey: PropertyKey.url) as? URL else { return nil }
         guard let camera = aDecoder.decodeObject(forKey: PropertyKey.cameraConfig) as? CameraConfig else { return nil }
         guard let auth = aDecoder.decodeObject(forKey: PropertyKey.auth) as? PrinterAuth else { return nil }
         
@@ -44,7 +44,7 @@ class PrinterConfig: NSObject, NSCoding {
     }}
 
 class CameraConfig: NSObject, NSCoding {
-    var url: String
+    var url: URL
     var auth: BasicAuth?
     
     private struct PropertyKey {
@@ -52,13 +52,13 @@ class CameraConfig: NSObject, NSCoding {
         static let auth = "auth"
     }
     
-    init(url: String, auth: BasicAuth?){
+    init(url: URL, auth: BasicAuth?){
         self.url = url
         self.auth = auth
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        guard let url = aDecoder.decodeObject(forKey: PropertyKey.url) as? String else { return nil }
+        guard let url = aDecoder.decodeObject(forKey: PropertyKey.url) as? URL else { return nil }
         
         self.init(
             url: url,

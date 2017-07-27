@@ -21,10 +21,10 @@ class PrinterDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         if let config = printer?.config {
-            printerHost.text = config.url
+            printerHost.text = config.url.absoluteString
             apiKey.text = config.auth.apiKey
             
-            cameraHost.text = config.camera.url
+            cameraHost.text = config.camera.url.absoluteString
             
             if let auth = config.auth.http {
                 basicAuth.isOn = true
@@ -38,9 +38,11 @@ class PrinterDetailViewController: UIViewController {
     }
     
     @IBAction func submitEdits(_ sender: Any) {
-        guard let url = printerHost.text else { return }
+        guard let printerHostURL = printerHost.text else { return }
+        guard let url = URL(string: printerHostURL) else { return }
         guard let apiKey = apiKey.text else { return }
-        guard let cameraHost = cameraHost.text else { return }
+        guard let cameraHostURL = cameraHost.text else { return }
+        guard let cameraHost = URL(string: cameraHostURL) else { return }
         guard let username = username.text else { return }
         guard let password = password.text else { return }
         

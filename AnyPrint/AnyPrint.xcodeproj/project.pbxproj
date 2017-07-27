@@ -30,6 +30,8 @@
 		51BA90171F1DB49500718216 /* CurrentPrintJobView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA90161F1DB49500718216 /* CurrentPrintJobView.xib */; };
 		51BA901A1F1DBDF000718216 /* PrintableModelDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA90191F1DBDF000718216 /* PrintableModelDataView.xib */; };
 		51BA901C1F1DBDFE00718216 /* PrintableModelDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA901B1F1DBDFE00718216 /* PrintableModelDataView.swift */; };
+		51EBCA531F2AACBD00B43255 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EBCA521F2AACBD00B43255 /* OverviewViewController.swift */; };
+		51EBCA551F2AACDD00B43255 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EBCA541F2AACDD00B43255 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		51BA90161F1DB49500718216 /* CurrentPrintJobView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentPrintJobView.xib; sourceTree = "<group>"; };
 		51BA90191F1DBDF000718216 /* PrintableModelDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrintableModelDataView.xib; sourceTree = "<group>"; };
 		51BA901B1F1DBDFE00718216 /* PrintableModelDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintableModelDataView.swift; sourceTree = "<group>"; };
+		51EBCA521F2AACBD00B43255 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		51EBCA541F2AACDD00B43255 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		66E366889691714C86934128 /* Pods-AnyPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyPrint.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnyPrint/Pods-AnyPrint.release.xcconfig"; sourceTree = "<group>"; };
 		E5E076BAA2B44EE2F11D6AFA /* Pods-AnyPrint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyPrint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnyPrint/Pods-AnyPrint.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,8 @@
 		5129254B1F28013C00FA07A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				51EBCA521F2AACBD00B43255 /* OverviewViewController.swift */,
+				51EBCA541F2AACDD00B43255 /* DetailViewController.swift */,
 				519123151F292D9A00E25547 /* PrinterViewController.swift */,
 				519123171F2A499B00E25547 /* PrinterDetailViewController.swift */,
 			);
@@ -360,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				519123181F2A499B00E25547 /* PrinterDetailViewController.swift in Sources */,
+				51EBCA551F2AACDD00B43255 /* DetailViewController.swift in Sources */,
 				5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */,
 				51770D921F1D5F880014271B /* MJPGCameraStreamView.swift in Sources */,
 				51BA90111F1DA9A500718216 /* CustomUIView.swift in Sources */,
@@ -372,6 +379,7 @@
 				51BA90151F1DB48700718216 /* CurrentPrintJobView.swift in Sources */,
 				51BA900F1F1D934100718216 /* ToolTemperatureView.swift in Sources */,
 				519123161F292D9A00E25547 /* PrinterViewController.swift in Sources */,
+				51EBCA531F2AACBD00B43255 /* OverviewViewController.swift in Sources */,
 				519123121F29193D00E25547 /* Printers.swift in Sources */,
 				51BA901C1F1DBDFE00718216 /* PrintableModelDataView.swift in Sources */,
 			);
