@@ -126,7 +126,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Saved Printers" id="uYi-Da-jgk">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="STh-gx-r8e"/>
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="PTe-Z7-Oo0"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BPL-kn-kP2">
                             <connections>
                                 <segue destination="EZ1-AR-51l" kind="show" id="uk0-yg-FuY"/>
@@ -652,7 +651,7 @@
         <image name="printers" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uk0-yg-FuY"/>
+        <segue reference="2ET-Ni-Nkv"/>
         <segue reference="gAD-hh-Sir"/>
     </inferredMetricsTieBreakers>
 </document>
