@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5129254D1F280EBC00FA07A6 /* PrinterConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5129254C1F280EBC00FA07A6 /* PrinterConfig.swift */; };
+		5129254F1F28147E00FA07A6 /* PrinterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5129254E1F28147E00FA07A6 /* PrinterState.swift */; };
+		512925511F28366600FA07A6 /* PrintableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512925501F28366600FA07A6 /* PrintableModels.swift */; };
+		512925531F28457E00FA07A6 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512925521F28457E00FA07A6 /* Printer.swift */; };
+		512925571F2846CE00FA07A6 /* OctoprintAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512925561F2846CE00FA07A6 /* OctoprintAPI.swift */; };
+		5129255A1F284EF300FA07A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 512925591F284EF300FA07A6 /* Podfile */; };
 		51770D921F1D5F880014271B /* MJPGCameraStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51770D911F1D5F880014271B /* MJPGCameraStreamView.swift */; };
+		519123121F29193D00E25547 /* Printers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519123111F29193D00E25547 /* Printers.swift */; };
+		519123161F292D9A00E25547 /* PrinterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519123151F292D9A00E25547 /* PrinterViewController.swift */; };
 		5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195C28E1F1D46B00050DD92 /* AppDelegate.swift */; };
 		5195C2961F1D46B00050DD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2941F1D46B00050DD92 /* Main.storyboard */; };
 		5195C2981F1D46B00050DD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2971F1D46B00050DD92 /* Assets.xcassets */; };
@@ -21,10 +29,20 @@
 		51BA90171F1DB49500718216 /* CurrentPrintJobView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA90161F1DB49500718216 /* CurrentPrintJobView.xib */; };
 		51BA901A1F1DBDF000718216 /* PrintableModelDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA90191F1DBDF000718216 /* PrintableModelDataView.xib */; };
 		51BA901C1F1DBDFE00718216 /* PrintableModelDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA901B1F1DBDFE00718216 /* PrintableModelDataView.swift */; };
+		98B79D00B1C70FF91BE0E12D /* Pods_AnyPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 255DFAD41CE1F1199715AAE1 /* Pods_AnyPrint.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		255DFAD41CE1F1199715AAE1 /* Pods_AnyPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5129254C1F280EBC00FA07A6 /* PrinterConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterConfig.swift; sourceTree = "<group>"; };
+		5129254E1F28147E00FA07A6 /* PrinterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterState.swift; sourceTree = "<group>"; };
+		512925501F28366600FA07A6 /* PrintableModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintableModels.swift; sourceTree = "<group>"; };
+		512925521F28457E00FA07A6 /* Printer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
+		512925561F2846CE00FA07A6 /* OctoprintAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctoprintAPI.swift; sourceTree = "<group>"; };
+		512925591F284EF300FA07A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		51770D911F1D5F880014271B /* MJPGCameraStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJPGCameraStreamView.swift; sourceTree = "<group>"; };
+		519123111F29193D00E25547 /* Printers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printers.swift; sourceTree = "<group>"; };
+		519123151F292D9A00E25547 /* PrinterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterViewController.swift; sourceTree = "<group>"; };
 		5195C28B1F1D46B00050DD92 /* AnyPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5195C28E1F1D46B00050DD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5195C2951F1D46B00050DD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +58,8 @@
 		51BA90161F1DB49500718216 /* CurrentPrintJobView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentPrintJobView.xib; sourceTree = "<group>"; };
 		51BA90191F1DBDF000718216 /* PrintableModelDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrintableModelDataView.xib; sourceTree = "<group>"; };
 		51BA901B1F1DBDFE00718216 /* PrintableModelDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintableModelDataView.swift; sourceTree = "<group>"; };
+		66E366889691714C86934128 /* Pods-AnyPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyPrint.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnyPrint/Pods-AnyPrint.release.xcconfig"; sourceTree = "<group>"; };
+		E5E076BAA2B44EE2F11D6AFA /* Pods-AnyPrint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyPrint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnyPrint/Pods-AnyPrint.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98B79D00B1C70FF91BE0E12D /* Pods_AnyPrint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +77,8 @@
 		5129254A1F28012800FA07A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				512925541F28468B00FA07A6 /* Data Models */,
+				512925551F2846A400FA07A6 /* Networking */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -63,8 +86,29 @@
 		5129254B1F28013C00FA07A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				519123151F292D9A00E25547 /* PrinterViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		512925541F28468B00FA07A6 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				519123111F29193D00E25547 /* Printers.swift */,
+				512925521F28457E00FA07A6 /* Printer.swift */,
+				5129254C1F280EBC00FA07A6 /* PrinterConfig.swift */,
+				5129254E1F28147E00FA07A6 /* PrinterState.swift */,
+				512925501F28366600FA07A6 /* PrintableModels.swift */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
+		512925551F2846A400FA07A6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				512925561F2846CE00FA07A6 /* OctoprintAPI.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		5195C2821F1D46B00050DD92 = {
@@ -72,6 +116,8 @@
 			children = (
 				5195C28D1F1D46B00050DD92 /* AnyPrint */,
 				5195C28C1F1D46B00050DD92 /* Products */,
+				B7045D4FE0147766AA1716FA /* Pods */,
+				90D7B1BFB80D34E6B3B101EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +138,7 @@
 				5129254B1F28013C00FA07A6 /* Controllers */,
 				5195C2971F1D46B00050DD92 /* Assets.xcassets */,
 				5195C2991F1D46B00050DD92 /* LaunchScreen.storyboard */,
+				512925591F284EF300FA07A6 /* Podfile */,
 				5195C29C1F1D46B00050DD92 /* Info.plist */,
 			);
 			path = AnyPrint;
@@ -163,6 +210,23 @@
 			name = PrintableModelData;
 			sourceTree = "<group>";
 		};
+		90D7B1BFB80D34E6B3B101EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				255DFAD41CE1F1199715AAE1 /* Pods_AnyPrint.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7045D4FE0147766AA1716FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5E076BAA2B44EE2F11D6AFA /* Pods-AnyPrint.debug.xcconfig */,
+				66E366889691714C86934128 /* Pods-AnyPrint.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5195C29F1F1D46B00050DD92 /* Build configuration list for PBXNativeTarget "AnyPrint" */;
 			buildPhases = (
+				7AA2BF514188BE446A0852A4 /* [CP] Check Pods Manifest.lock */,
 				5195C2871F1D46B00050DD92 /* Sources */,
 				5195C2881F1D46B00050DD92 /* Frameworks */,
 				5195C2891F1D46B00050DD92 /* Resources */,
+				20EFB0FF9545BD0C62D3F1D0 /* [CP] Embed Pods Frameworks */,
+				EDDE92A83EA30F820608AF9C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +292,7 @@
 			files = (
 				5195C29B1F1D46B00050DD92 /* LaunchScreen.storyboard in Resources */,
 				5195C2981F1D46B00050DD92 /* Assets.xcassets in Resources */,
+				5129255A1F284EF300FA07A6 /* Podfile in Resources */,
 				51BA90171F1DB49500718216 /* CurrentPrintJobView.xib in Resources */,
 				51BA901A1F1DBDF000718216 /* PrintableModelDataView.xib in Resources */,
 				51A272E81F1D57DE00DF01ED /* MJPGCameraStreamView.xib in Resources */,
@@ -235,6 +303,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20EFB0FF9545BD0C62D3F1D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnyPrint/Pods-AnyPrint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AA2BF514188BE446A0852A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDDE92A83EA30F820608AF9C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnyPrint/Pods-AnyPrint-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5195C2871F1D46B00050DD92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,8 +360,15 @@
 				51770D921F1D5F880014271B /* MJPGCameraStreamView.swift in Sources */,
 				51BA90111F1DA9A500718216 /* CustomUIView.swift in Sources */,
 				51BA90071F1D721100718216 /* UIButton.swift in Sources */,
+				512925531F28457E00FA07A6 /* Printer.swift in Sources */,
+				512925571F2846CE00FA07A6 /* OctoprintAPI.swift in Sources */,
+				5129254F1F28147E00FA07A6 /* PrinterState.swift in Sources */,
+				512925511F28366600FA07A6 /* PrintableModels.swift in Sources */,
+				5129254D1F280EBC00FA07A6 /* PrinterConfig.swift in Sources */,
 				51BA90151F1DB48700718216 /* CurrentPrintJobView.swift in Sources */,
 				51BA900F1F1D934100718216 /* ToolTemperatureView.swift in Sources */,
+				519123161F292D9A00E25547 /* PrinterViewController.swift in Sources */,
+				519123121F29193D00E25547 /* Printers.swift in Sources */,
 				51BA901C1F1DBDFE00718216 /* PrintableModelDataView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +490,7 @@
 		};
 		5195C2A01F1D46B00050DD92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E076BAA2B44EE2F11D6AFA /* Pods-AnyPrint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XYVQ63GG7X;
@@ -380,6 +504,7 @@
 		};
 		5195C2A11F1D46B00050DD92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66E366889691714C86934128 /* Pods-AnyPrint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XYVQ63GG7X;

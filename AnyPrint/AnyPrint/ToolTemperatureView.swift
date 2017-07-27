@@ -30,11 +30,23 @@ import UIKit
         get { return targetTempLabel.text }
     }
     
-    @IBInspectable var tempUnit: String? {
+    @IBInspectable private var tempUnit: String? {
         set {
             actualTempUnitLabel.text = newValue
             targetTempUnitLabel.text = newValue
         }
         get { return actualTempUnitLabel.text }
+    }
+    
+    var state: ToolTemperatureState? {
+        didSet {
+            toolName    = self.state?.toolName
+            actualTemp  = String(describing: self.state?.actualTemp)
+            targetTemp  = String(describing: self.state?.targetTemp)
+            
+            tempUnit    = "C" // Currently Octoprint Only Returns Celsius
+            // This is NOT reflected in the return data, and this exists
+            // solely for future proofing
+        }
     }
 }
