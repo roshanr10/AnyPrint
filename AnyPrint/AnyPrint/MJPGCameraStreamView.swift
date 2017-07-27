@@ -7,5 +7,6 @@
 //
 
 import UIKit
+import MjpegStreamingKit
 
 class MJPGCameraStreamView: CustomUIView {}
