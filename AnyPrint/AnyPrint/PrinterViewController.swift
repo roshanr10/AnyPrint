@@ -9,7 +9,10 @@
 import UIKit
 
 class PrinterViewController: UITableViewController {
-
+    struct Constants {
+        static let reuseIdentifier = "printerConfigCell"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,20 +38,18 @@ class PrinterViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Printers.sharedInstance.printers.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier, for: indexPath)
+        
+        if(Printers.sharedInstance.printers[indexPath.row] == Printers.sharedInstance.selected){
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
+        return cell
     }
-    */
-
 }
