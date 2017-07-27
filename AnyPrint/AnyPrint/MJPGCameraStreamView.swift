@@ -9,4 +9,14 @@
 import UIKit
 import MjpegStreamingKit
 
-class MJPGCameraStreamView: CustomUIView {}
+class MJPGCameraStreamView: CustomUIView {
+    var streamingController: MjpegStreamingController?
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var url = URL(string: "") {
+        didSet {
+            streamingController?.contentURL = url
+            streamingController?.play()
+        }
+    }
+}

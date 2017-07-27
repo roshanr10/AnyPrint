@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -157,7 +157,7 @@
         <!--Overview-->
         <scene sceneID="0cU-o1-P9a">
             <objects>
-                <viewController id="NPZ-rz-D3f" sceneMemberID="viewController">
+                <viewController id="NPZ-rz-D3f" customClass="OverviewViewController" customModule="AnyPrint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RyR-R6-KBt"/>
                         <viewControllerLayoutGuide type="bottom" id="BoA-GA-ZyK"/>
@@ -257,6 +257,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" image="overview" id="KYD-cc-NUL"/>
+                    <connections>
+                        <outlet property="cameraStream" destination="wob-Qi-evl" id="bjw-Iz-xPf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijB-Ka-A0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -507,7 +510,7 @@
         <!--Control-->
         <scene sceneID="wul-0a-l4y">
             <objects>
-                <viewController id="mdu-Uh-dIH" sceneMemberID="viewController">
+                <viewController id="mdu-Uh-dIH" customClass="DetailViewController" customModule="AnyPrint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BCO-vb-lTv"/>
                         <viewControllerLayoutGuide type="bottom" id="iqj-nQ-aU8"/>
@@ -639,6 +642,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Control" image="control" id="rA6-zS-ewK"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="cameraStream" destination="1CR-Xf-aXI" id="LZA-Ic-cdh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDI-uU-jqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
