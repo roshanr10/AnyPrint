@@ -349,10 +349,10 @@
             </objects>
             <point key="canvasLocation" x="1348" y="-135"/>
         </scene>
-        <!--View Controller-->
+        <!--Printer Detail View Controller-->
         <scene sceneID="Fed-um-w9o">
             <objects>
-                <viewController id="EZ1-AR-51l" sceneMemberID="viewController">
+                <viewController id="EZ1-AR-51l" customClass="PrinterDetailViewController" customModule="AnyPrint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x6p-eR-oRB"/>
                         <viewControllerLayoutGuide type="bottom" id="gVw-uj-Eu1"/>
@@ -430,6 +430,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBp-9V-i7x">
+                                <rect key="frame" x="16" y="578" width="343" height="30"/>
+                                <state key="normal" title="Select Printer"/>
+                                <connections>
+                                    <action selector="selectPrinter:" destination="EZ1-AR-51l" eventType="touchUpInside" id="fl1-yJ-v9u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -441,6 +448,7 @@
                             <constraint firstItem="TF3-JO-4oL" firstAttribute="leading" secondItem="GXP-0j-fwx" secondAttribute="trailing" constant="20" id="4r2-rA-QzQ"/>
                             <constraint firstItem="GoC-iF-P8A" firstAttribute="leading" secondItem="gPE-v5-TBS" secondAttribute="trailing" constant="-104" id="6NP-Wv-CTt"/>
                             <constraint firstItem="37Y-DL-WMp" firstAttribute="leading" secondItem="GoC-iF-P8A" secondAttribute="leading" id="6zN-KU-aEa"/>
+                            <constraint firstItem="gVw-uj-Eu1" firstAttribute="top" secondItem="TBp-9V-i7x" secondAttribute="bottom" constant="15" id="8ej-26-mb3"/>
                             <constraint firstItem="gPE-v5-TBS" firstAttribute="trailing" secondItem="PzP-pU-g53" secondAttribute="trailing" id="8sI-Fp-yXN"/>
                             <constraint firstItem="ffo-4e-0eR" firstAttribute="baseline" secondItem="PzP-pU-g53" secondAttribute="baseline" id="9ci-Ul-498"/>
                             <constraint firstItem="bec-m3-GCz" firstAttribute="top" secondItem="37Y-DL-WMp" secondAttribute="bottom" constant="16" id="AkG-dT-ENr"/>
@@ -457,6 +465,7 @@
                             <constraint firstItem="TF3-JO-4oL" firstAttribute="leading" secondItem="dr8-f2-KX9" secondAttribute="leading" id="Pd3-xU-VSl"/>
                             <constraint firstItem="GXP-0j-fwx" firstAttribute="trailing" secondItem="gPE-v5-TBS" secondAttribute="trailing" id="RiS-x4-nX3"/>
                             <constraint firstItem="6lt-7y-xXW" firstAttribute="trailing" secondItem="mE5-2s-DTs" secondAttribute="trailing" id="SK0-5O-OaZ"/>
+                            <constraint firstItem="TBp-9V-i7x" firstAttribute="leading" secondItem="2Th-Ge-uS9" secondAttribute="leadingMargin" id="Xno-iP-gvB"/>
                             <constraint firstItem="dr8-f2-KX9" firstAttribute="leading" secondItem="ffo-4e-0eR" secondAttribute="leading" id="YgJ-P6-elX"/>
                             <constraint firstItem="TF3-JO-4oL" firstAttribute="baseline" secondItem="GXP-0j-fwx" secondAttribute="baseline" id="YrY-E7-L2P"/>
                             <constraint firstItem="GXP-0j-fwx" firstAttribute="leading" secondItem="gPE-v5-TBS" secondAttribute="leading" id="ZCX-fY-uWI"/>
@@ -469,14 +478,27 @@
                             <constraint firstItem="dr8-f2-KX9" firstAttribute="baseline" secondItem="gPE-v5-TBS" secondAttribute="baseline" id="o2K-xx-2By"/>
                             <constraint firstItem="37Y-DL-WMp" firstAttribute="top" secondItem="GoC-iF-P8A" secondAttribute="bottom" constant="16" id="qU2-d9-dz6"/>
                             <constraint firstItem="gPE-v5-TBS" firstAttribute="leading" secondItem="PzP-pU-g53" secondAttribute="leading" id="qyV-w4-UDK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TBp-9V-i7x" secondAttribute="trailing" id="rEM-ic-en2"/>
                             <constraint firstItem="PzP-pU-g53" firstAttribute="top" secondItem="x6p-eR-oRB" secondAttribute="bottom" constant="16" id="rG7-Zu-89H"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="KxW-jS-JJa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7Y2-Hi-6T3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7Y2-Hi-6T3">
+                            <connections>
+                                <action selector="submitEdits:" destination="EZ1-AR-51l" id="Tbd-zN-ynd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="apiKey" destination="dr8-f2-KX9" id="hk6-4J-XwF"/>
+                        <outlet property="basicAuth" destination="Lxk-5V-0EY" id="F48-a3-8Ju"/>
+                        <outlet property="cameraHost" destination="TF3-JO-4oL" id="f2Q-tA-7bE"/>
+                        <outlet property="password" destination="6lt-7y-xXW" id="Gdt-LK-JRk"/>
+                        <outlet property="printerHost" destination="ffo-4e-0eR" id="aR5-Lk-UcE"/>
+                        <outlet property="username" destination="mE5-2s-DTs" id="T4I-MJ-oig"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qU1-PC-s5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

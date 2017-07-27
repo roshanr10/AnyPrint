@@ -9,9 +9,9 @@
 import Foundation
 
 class PrinterConfig: NSObject, NSCoding {
-    var url: String?
-    var camera: CameraConfig?
-    var auth: PrinterAuth?
+    var url: String
+    var camera: CameraConfig
+    var auth: PrinterAuth
     
     private struct PropertyKey {
         static let url = "url"
@@ -19,17 +19,21 @@ class PrinterConfig: NSObject, NSCoding {
         static let auth = "auth"
     }
     
-    init(url: String?, camera: CameraConfig?, auth: PrinterAuth?){
+    init(url: String, camera: CameraConfig, auth: PrinterAuth){
         self.url = url
         self.camera = camera
         self.auth = auth
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
+        guard let url = aDecoder.decodeObject(forKey: PropertyKey.url) as? String else { return nil }
+        guard let camera = aDecoder.decodeObject(forKey: PropertyKey.cameraConfig) as? CameraConfig else { return nil }
+        guard let auth = aDecoder.decodeObject(forKey: PropertyKey.auth) as? PrinterAuth else { return nil }
+        
         self.init(
-            url: aDecoder.decodeObject(forKey: PropertyKey.url) as? String,
-            camera: aDecoder.decodeObject(forKey: PropertyKey.cameraConfig) as? CameraConfig,
-            auth: aDecoder.decodeObject(forKey: PropertyKey.auth) as? PrinterAuth
+            url: url,
+            camera: camera,
+            auth: auth
         )
     }
     
@@ -40,7 +44,7 @@ class PrinterConfig: NSObject, NSCoding {
     }}
 
 class CameraConfig: NSObject, NSCoding {
-    var url: String?
+    var url: String
     var auth: BasicAuth?
     
     private struct PropertyKey {
@@ -48,14 +52,16 @@ class CameraConfig: NSObject, NSCoding {
         static let auth = "auth"
     }
     
-    init(url: String?, auth: BasicAuth?){
+    init(url: String, auth: BasicAuth?){
         self.url = url
         self.auth = auth
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
+        guard let url = aDecoder.decodeObject(forKey: PropertyKey.url) as? String else { return nil }
+        
         self.init(
-            url: aDecoder.decodeObject(forKey: PropertyKey.url) as? String,
+            url: url,
             auth: aDecoder.decodeObject(forKey: PropertyKey.auth) as? BasicAuth
         )
     }
@@ -94,7 +100,7 @@ class BasicAuth: NSObject, NSCoding {
 }
 
 class PrinterAuth: NSObject, NSCoding {
-    var apiKey: String?
+    var apiKey: String
     var http: BasicAuth?
     
     private struct PropertyKey {
@@ -102,16 +108,16 @@ class PrinterAuth: NSObject, NSCoding {
         static let http = "http"
     }
     
-    init(apiKey: String?, httpAuth: BasicAuth?){
-        super.init()
-        
+    init(apiKey: String, httpAuth: BasicAuth?){
         self.apiKey = apiKey
         self.http = httpAuth
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
+        guard let apiKey = aDecoder.decodeObject(forKey: PropertyKey.apiKey) as? String else { return nil }
+        
         self.init(
-            apiKey: aDecoder.decodeObject(forKey: PropertyKey.apiKey) as? String,
+            apiKey: apiKey,
             httpAuth: aDecoder.decodeObject(forKey: PropertyKey.http) as? BasicAuth
         )
     }

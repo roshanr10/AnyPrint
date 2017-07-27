@@ -5,6 +5,9 @@
       location = "group:AnyPrint.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../../../../Downloads/MjpegStreamingKit-master-2/MjpegStreamingKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

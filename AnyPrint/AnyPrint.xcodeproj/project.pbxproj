@@ -13,9 +13,12 @@
 		512925531F28457E00FA07A6 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512925521F28457E00FA07A6 /* Printer.swift */; };
 		512925571F2846CE00FA07A6 /* OctoprintAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512925561F2846CE00FA07A6 /* OctoprintAPI.swift */; };
 		5129255A1F284EF300FA07A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 512925591F284EF300FA07A6 /* Podfile */; };
+		514D080F1F2AA6A8006F666B /* MjpegStreamingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514D080E1F2AA6A8006F666B /* MjpegStreamingKit.framework */; };
+		514D08101F2AA6A8006F666B /* MjpegStreamingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 514D080E1F2AA6A8006F666B /* MjpegStreamingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		51770D921F1D5F880014271B /* MJPGCameraStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51770D911F1D5F880014271B /* MJPGCameraStreamView.swift */; };
 		519123121F29193D00E25547 /* Printers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519123111F29193D00E25547 /* Printers.swift */; };
 		519123161F292D9A00E25547 /* PrinterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519123151F292D9A00E25547 /* PrinterViewController.swift */; };
+		519123181F2A499B00E25547 /* PrinterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519123171F2A499B00E25547 /* PrinterDetailViewController.swift */; };
 		5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195C28E1F1D46B00050DD92 /* AppDelegate.swift */; };
 		5195C2961F1D46B00050DD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2941F1D46B00050DD92 /* Main.storyboard */; };
 		5195C2981F1D46B00050DD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2971F1D46B00050DD92 /* Assets.xcassets */; };
@@ -29,20 +32,35 @@
 		51BA90171F1DB49500718216 /* CurrentPrintJobView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA90161F1DB49500718216 /* CurrentPrintJobView.xib */; };
 		51BA901A1F1DBDF000718216 /* PrintableModelDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA90191F1DBDF000718216 /* PrintableModelDataView.xib */; };
 		51BA901C1F1DBDFE00718216 /* PrintableModelDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA901B1F1DBDFE00718216 /* PrintableModelDataView.swift */; };
-		98B79D00B1C70FF91BE0E12D /* Pods_AnyPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 255DFAD41CE1F1199715AAE1 /* Pods_AnyPrint.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		514D080D1F2AA69D006F666B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				514D08101F2AA6A8006F666B /* MjpegStreamingKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		255DFAD41CE1F1199715AAE1 /* Pods_AnyPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5129254C1F280EBC00FA07A6 /* PrinterConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterConfig.swift; sourceTree = "<group>"; };
 		5129254E1F28147E00FA07A6 /* PrinterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterState.swift; sourceTree = "<group>"; };
 		512925501F28366600FA07A6 /* PrintableModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintableModels.swift; sourceTree = "<group>"; };
 		512925521F28457E00FA07A6 /* Printer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		512925561F2846CE00FA07A6 /* OctoprintAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctoprintAPI.swift; sourceTree = "<group>"; };
 		512925591F284EF300FA07A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		514D080E1F2AA6A8006F666B /* MjpegStreamingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MjpegStreamingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		514D08111F2AA6B7006F666B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51770D911F1D5F880014271B /* MJPGCameraStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJPGCameraStreamView.swift; sourceTree = "<group>"; };
 		519123111F29193D00E25547 /* Printers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printers.swift; sourceTree = "<group>"; };
 		519123151F292D9A00E25547 /* PrinterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterViewController.swift; sourceTree = "<group>"; };
+		519123171F2A499B00E25547 /* PrinterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterDetailViewController.swift; sourceTree = "<group>"; };
 		5195C28B1F1D46B00050DD92 /* AnyPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5195C28E1F1D46B00050DD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5195C2951F1D46B00050DD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98B79D00B1C70FF91BE0E12D /* Pods_AnyPrint.framework in Frameworks */,
+				514D080F1F2AA6A8006F666B /* MjpegStreamingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				519123151F292D9A00E25547 /* PrinterViewController.swift */,
+				519123171F2A499B00E25547 /* PrinterDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -213,7 +232,8 @@
 		90D7B1BFB80D34E6B3B101EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				255DFAD41CE1F1199715AAE1 /* Pods_AnyPrint.framework */,
+				514D08111F2AA6B7006F666B /* Alamofire.framework */,
+				514D080E1F2AA6A8006F666B /* MjpegStreamingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -240,6 +260,7 @@
 				5195C2891F1D46B00050DD92 /* Resources */,
 				20EFB0FF9545BD0C62D3F1D0 /* [CP] Embed Pods Frameworks */,
 				EDDE92A83EA30F820608AF9C /* [CP] Copy Pods Resources */,
+				514D080D1F2AA69D006F666B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				519123181F2A499B00E25547 /* PrinterDetailViewController.swift in Sources */,
 				5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */,
 				51770D921F1D5F880014271B /* MJPGCameraStreamView.swift in Sources */,
 				51BA90111F1DA9A500718216 /* CustomUIView.swift in Sources */,

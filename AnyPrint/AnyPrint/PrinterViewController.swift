@@ -13,31 +13,6 @@ class PrinterViewController: UITableViewController {
         static let reuseIdentifier = "printerConfigCell"
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        print("Hello")
-        
-        Printers.sharedInstance.printers.append(
-            Printer(
-                PrinterConfig(
-                    url: "http://3dprint.roshanravi.com",
-                    camera: CameraConfig(
-                        url: "http://3dprint.roshanravi.com",
-                        auth: nil
-                    ),
-                    auth: nil
-                )
-            )
-        )
-        
-        Printers.save()
-        
-        print(Printers.sharedInstance.printers.count)
-        
-        // Do any additional setup after loading the view.
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Printers.sharedInstance.printers.count
     }
@@ -45,11 +20,9 @@ class PrinterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier, for: indexPath)
         
-        if(Printers.sharedInstance.printers[indexPath.row] == Printers.sharedInstance.selected){
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+        cell.textLabel?.text = Printers.sharedInstance.printers[indexPath.row].config.url
+        cell.accessoryType = Printers.sharedInstance.printers[indexPath.row] == Printers.sharedInstance.selected ? .checkmark : .none
+        
         return cell
     }
     
@@ -63,5 +36,16 @@ class PrinterViewController: UITableViewController {
             
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let printerDetailViewController = segue.destination as? PrinterDetailViewController,
+            let row = tableView.indexPathForSelectedRow?.row {
+            printerDetailViewController.printer = Printers.sharedInstance.printers[row]
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 }
