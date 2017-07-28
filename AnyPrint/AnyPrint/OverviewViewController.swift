@@ -14,7 +14,7 @@ class OverviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //cameraStream.url = URL(string)
+        cameraStream.url = Printers.sharedInstance.selected?.config.camera.url
 
         // Do any additional setup after loading the view.
     }

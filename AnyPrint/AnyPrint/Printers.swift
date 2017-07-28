@@ -48,8 +48,6 @@ class Printers: NSObject, NSCoding {
     }
 
     static func reload() -> Printers  {
-        print("Reloading printers...")
-        
         return NSKeyedUnarchiver.unarchiveObject(withFile: Printers.ArchiveURL.path) as? Printers ?? Printers()
     }
 }
