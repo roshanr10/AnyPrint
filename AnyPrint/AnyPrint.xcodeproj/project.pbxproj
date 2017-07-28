@@ -40,7 +40,7 @@
 		512925501F28366600FA07A6 /* PrintableModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintableModels.swift; sourceTree = "<group>"; };
 		512925521F28457E00FA07A6 /* Printer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		512925561F2846CE00FA07A6 /* OctoprintAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctoprintAPI.swift; sourceTree = "<group>"; };
-		512925591F284EF300FA07A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		512925591F284EF300FA07A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		514D080E1F2AA6A8006F666B /* MjpegStreamingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MjpegStreamingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		514D08111F2AA6B7006F666B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51770D911F1D5F880014271B /* MJPGCameraStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJPGCameraStreamView.swift; sourceTree = "<group>"; };
