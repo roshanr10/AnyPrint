@@ -11,6 +11,7 @@ import MjpegStreamingKit
 
 class MJPGCameraStreamView: CustomUIView {
     var streamingController: MjpegStreamingController?
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
@@ -23,6 +24,14 @@ class MJPGCameraStreamView: CustomUIView {
                     persistence: .none
                 ))
             }
+            
+            streamingController?.didStartLoading = { [unowned self] in
+                self.activityIndicator.startAnimating()
+            }
+            
+            streamingController?.didFinishLoading = { [unowned self] in
+                self.activityIndicator.stopAnimating()
+            }
         }
     }
     
@@ -30,8 +39,15 @@ class MJPGCameraStreamView: CustomUIView {
         didSet {
             if let cameraStreamer = streamingController {
                 cameraStreamer.contentURL = cameraConfig?.url
-                cameraStreamer.play()
             }
+        }
+    }
+    
+    override func willMove(toWindow newWindow: UIWindow?) {
+        if let _ = newWindow {
+            streamingController?.play()
+        } else {
+            streamingController?.stop()
         }
     }
 }

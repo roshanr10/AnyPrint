@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MJPGCameraStreamView" customModule="AnyPrint" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="gWN-9L-CxP" id="Ycf-jw-oft"/>
                 <outlet property="imageView" destination="nfg-hK-Cjx" id="vKj-WB-0w4"/>
             </connections>
         </placeholder>
@@ -27,11 +28,16 @@
                         <constraint firstAttribute="width" secondItem="nfg-hK-Cjx" secondAttribute="height" multiplier="4:3" id="Gzp-DH-or6"/>
                     </constraints>
                 </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gWN-9L-CxP">
+                    <rect key="frame" x="175" y="127" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nfg-hK-Cjx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Ke-Md-vUo"/>
+                <constraint firstItem="gWN-9L-CxP" firstAttribute="centerX" secondItem="nfg-hK-Cjx" secondAttribute="centerX" id="D90-Ud-w91"/>
                 <constraint firstItem="nfg-hK-Cjx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lo2-St-MUc"/>
+                <constraint firstItem="gWN-9L-CxP" firstAttribute="centerY" secondItem="nfg-hK-Cjx" secondAttribute="centerY" id="sbi-lE-tIW"/>
                 <constraint firstAttribute="trailing" secondItem="nfg-hK-Cjx" secondAttribute="trailing" id="vqr-gP-g50"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
