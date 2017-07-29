@@ -22,6 +22,8 @@
 		5195C2981F1D46B00050DD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2971F1D46B00050DD92 /* Assets.xcassets */; };
 		5195C29B1F1D46B00050DD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5195C2991F1D46B00050DD92 /* LaunchScreen.storyboard */; };
 		51A272E81F1D57DE00DF01ED /* MJPGCameraStreamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A272E71F1D57DE00DF01ED /* MJPGCameraStreamView.xib */; };
+		51B57B801F2D2E6400165733 /* MjpegStreamingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514D080E1F2AA6A8006F666B /* MjpegStreamingKit.framework */; };
+		51B57B811F2D2E6400165733 /* MjpegStreamingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 514D080E1F2AA6A8006F666B /* MjpegStreamingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		51BA90071F1D721100718216 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA90061F1D721100718216 /* UIButton.swift */; };
 		51BA900C1F1D8F0C00718216 /* ToolTemperatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BA900B1F1D8F0C00718216 /* ToolTemperatureView.xib */; };
 		51BA900F1F1D934100718216 /* ToolTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BA900E1F1D934100718216 /* ToolTemperatureView.swift */; };
@@ -34,6 +36,20 @@
 		51EBCA551F2AACDD00B43255 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EBCA541F2AACDD00B43255 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		51B57B7F1F2D2E6100165733 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				51B57B811F2D2E6400165733 /* MjpegStreamingKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5129254C1F280EBC00FA07A6 /* PrinterConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterConfig.swift; sourceTree = "<group>"; };
 		5129254E1F28147E00FA07A6 /* PrinterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterState.swift; sourceTree = "<group>"; };
@@ -42,7 +58,6 @@
 		512925561F2846CE00FA07A6 /* OctoprintAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctoprintAPI.swift; sourceTree = "<group>"; };
 		512925591F284EF300FA07A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		514D080E1F2AA6A8006F666B /* MjpegStreamingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MjpegStreamingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		514D08111F2AA6B7006F666B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51770D911F1D5F880014271B /* MJPGCameraStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJPGCameraStreamView.swift; sourceTree = "<group>"; };
 		519123111F29193D00E25547 /* Printers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printers.swift; sourceTree = "<group>"; };
 		519123151F292D9A00E25547 /* PrinterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +69,7 @@
 		5195C29A1F1D46B00050DD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5195C29C1F1D46B00050DD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51A272E71F1D57DE00DF01ED /* MJPGCameraStreamView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJPGCameraStreamView.xib; sourceTree = "<group>"; };
+		51B57B821F2D2E8300165733 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BA90061F1D721100718216 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		51BA900B1F1D8F0C00718216 /* ToolTemperatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolTemperatureView.xib; sourceTree = "<group>"; };
 		51BA900E1F1D934100718216 /* ToolTemperatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolTemperatureView.swift; sourceTree = "<group>"; };
@@ -73,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B57B801F2D2E6400165733 /* MjpegStreamingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +238,7 @@
 		90D7B1BFB80D34E6B3B101EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				514D08111F2AA6B7006F666B /* Alamofire.framework */,
+				51B57B821F2D2E8300165733 /* Alamofire.framework */,
 				514D080E1F2AA6A8006F666B /* MjpegStreamingKit.framework */,
 			);
 			name = Frameworks;
@@ -249,6 +266,7 @@
 				5195C2891F1D46B00050DD92 /* Resources */,
 				20EFB0FF9545BD0C62D3F1D0 /* [CP] Embed Pods Frameworks */,
 				EDDE92A83EA30F820608AF9C /* [CP] Copy Pods Resources */,
+				51B57B7F1F2D2E6100165733 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
