@@ -10,9 +10,9 @@ import UIKit
 
 class OverviewViewController: UIViewController {
     @IBOutlet weak var cameraStream: MJPGCameraStreamView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         cameraStream.cameraConfig = Printers.sharedInstance.selected?.config.camera
     }
