@@ -78,15 +78,11 @@ class PrinterDetailViewController: UIViewController {
             )
         }
         
-        Printers.save()
-        
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func selectPrinter(_ sender: Any) {
         Printers.sharedInstance.selected = printer
-        
-        Printers.save()
         
         self.navigationController?.popViewController(animated: true)
     }

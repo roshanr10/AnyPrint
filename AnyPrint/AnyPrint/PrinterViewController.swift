@@ -38,8 +38,6 @@ class PrinterViewController: UITableViewController {
                 Printers.sharedInstance.selected = nil
             }
             
-            Printers.save()
-            
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
