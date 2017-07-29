@@ -32,7 +32,13 @@ class PrinterViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            Printers.sharedInstance.printers.remove(at: indexPath.row)
+            let removedElement = Printers.sharedInstance.printers.remove(at: indexPath.row)
+            
+            if removedElement == Printers.sharedInstance.selected {
+                Printers.sharedInstance.selected = nil
+            }
+            
+            Printers.save()
             
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
