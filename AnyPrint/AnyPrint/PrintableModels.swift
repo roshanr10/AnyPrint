@@ -23,11 +23,11 @@ struct PrintableModel {
 }
 
 enum PrintableModelLocation: String {
-    case local  = "local"
-    case sdcard = "sdcard"
+    case local  = "Local"
+    case sdcard = "SD Card"
 }
 
 enum PrintableModelType: String {
-    case model          = "model"
-    case machinecode    = "machinecode"
+    case model          = "Model"
+    case machinecode    = "Machine Code"
 }
