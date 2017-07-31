@@ -14,4 +14,18 @@ class CurrentPrintJobView: CustomUIView {
     @IBOutlet weak var approxTime: UILabel!
     @IBOutlet weak var timeSpent: UILabel!
     @IBOutlet weak var timeLeft: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    var currentPrintJob: JobState? {
+        didSet {
+            fileName.text = currentPrintJob?.job
+            filamentUsed.text = "\(currentPrintJob?.filament.length ?? 0)m / \(currentPrintJob?.filament.volume ?? 0)cm³"
+            
+            approxTime.text = ((currentPrintJob?.timeLeft ?? 0) + (currentPrintJob?.timeSpent ?? 0)).asHMS()
+            timeSpent.text = currentPrintJob?.timeSpent.asHMS()
+            timeLeft.text = currentPrintJob?.timeLeft.asHMS()
+            
+            progressBar.progress = Float(currentPrintJob?.percentComplete ?? 0)
+        }
+    }
 }

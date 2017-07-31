@@ -14,6 +14,7 @@
                 <outlet property="approxTime" destination="89c-Et-eed" id="qKd-mj-trh"/>
                 <outlet property="filamentUsed" destination="4mr-Xn-I8z" id="5ci-VO-qwh"/>
                 <outlet property="fileName" destination="qjd-mg-4G2" id="vaV-Ty-Fum"/>
+                <outlet property="progressBar" destination="yte-o1-yHG" id="SnJ-to-iYx"/>
                 <outlet property="timeLeft" destination="DBf-6W-cQx" id="ORb-6k-foz"/>
                 <outlet property="timeSpent" destination="DGU-pF-0gT" id="shw-aD-6Yz"/>
             </connections>

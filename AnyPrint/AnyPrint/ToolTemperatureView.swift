@@ -41,8 +41,9 @@ import UIKit
     var state: ToolTemperatureState? {
         didSet {
             toolName    = self.state?.toolName
-            actualTemp  = String(describing: self.state?.actualTemp)
-            targetTemp  = String(describing: self.state?.targetTemp)
+
+            actualTemp  = String(format:"%.1f",  self.state?.actualTemp ?? 0)
+            targetTemp  = String(format:"%.1f",  self.state?.targetTemp ?? 0)
             
             tempUnit    = "C" // Currently Octoprint Only Returns Celsius
             // This is NOT reflected in the return data, and this exists
