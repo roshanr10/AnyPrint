@@ -13,6 +13,7 @@ class OctoprintAPI {
     private struct paths {}
     
     static func isApiWorking(for config: PrinterConfig, closure: (Bool) -> ()){
+        // Placeholder for Future Verification
         closure(true)
     }
     
