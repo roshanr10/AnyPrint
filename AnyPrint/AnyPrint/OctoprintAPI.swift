@@ -12,6 +12,10 @@ import Alamofire
 class OctoprintAPI {
     private struct paths {}
     
+    static func isApiWorking(for config: PrinterConfig, closure: (Bool) -> ()){
+        closure(true)
+    }
+    
     static func getState(for config: PrinterConfig, closure: (PrinterState) -> ()) {
         // Alamofire.request("https://httpbin.org/get").responseJSON { response in }
     }
@@ -23,6 +27,19 @@ class OctoprintAPI {
             }
         }*/
     }
+    
+    static func startPrint(for config: PrinterConfig, model: PrintableModel, closure: () -> ()){
+    
+    }
+    
+    static func pausePrint(for config: PrinterConfig, closure: () -> ()){
+    
+    }
+    
+    static func stopPrint(for config: PrinterConfig, closure: () -> ()){
+    
+    }
+
     
     /*
      * Addt. Features to Add...

@@ -37,8 +37,7 @@ class PrinterDetailViewController: UIViewController {
         }
     }
     
-    @IBAction func submitEdits(_ sender: Any) {
-        guard let printerHostURL = printerHost.text else { return }
+    @IBAction func submitEdits(_ sender: Any) {        guard let printerHostURL = printerHost.text else { return }
         guard let url = URL(string: printerHostURL) else { return }
         guard let apiKey = apiKey.text else { return }
         guard let cameraHostURL = cameraHost.text else { return }
@@ -61,24 +60,35 @@ class PrinterDetailViewController: UIViewController {
             httpAuth: auth
         )
         
-        // Don't replace Config. due to Ref. Semantics
-        if let config = printer?.config {
-            config.url = url
-            config.auth.apiKey = apiKey
-            config.camera = cameraConfig
-        } else {
-            Printers.sharedInstance.printers.append(
-                Printer(
-                    PrinterConfig(
-                        url: url,
-                        camera: cameraConfig,
-                        auth: printerAuth
-                    )
-                )
-            )
-        }
+        let tempConfig = PrinterConfig(
+            url: url,
+            camera: cameraConfig,
+            auth: printerAuth
+        )
         
-        self.navigationController?.popViewController(animated: true)
+        // Show Loading Symbol (Network).?
+        OctoprintAPI.isApiWorking(for: tempConfig) { (working) in
+            // Hide Loading Symbol (Network).?
+            
+            if working {
+                // Don't replace Config. due to Ref. Semantics
+                if let config = printer?.config {
+                    config.url = tempConfig.url
+                    config.camera = tempConfig.camera
+                    config.auth = tempConfig.auth
+                } else {
+                    Printers.sharedInstance.printers.append(
+                        Printer(
+                            tempConfig
+                        )
+                    )
+                }
+                
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                // Alert User that Printer Cred's Aren't Valid
+            }
+        }
     }
     
     @IBAction func selectPrinter(_ sender: Any) {
