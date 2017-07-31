@@ -78,9 +78,7 @@ class PrinterDetailViewController: UIViewController {
                     config.auth = tempConfig.auth
                 } else {
                     Printers.sharedInstance.printers.append(
-                        Printer(
-                            tempConfig
-                        )
+                        Printer(tempConfig)
                     )
                 }
                 
