@@ -84,15 +84,20 @@ class PrinterDetailViewController: UIViewController {
                 
                 self.navigationController?.popViewController(animated: true)
             } else {
-                // Alert User that Printer Cred's Aren't Valid
-                
                 invalidConfig()
             }
         }
     }
     
     func invalidConfig(){
-    
+        // Alert User that Printer Cred's Aren't Valid
+        
+        let alertController = UIAlertController(title: "Invalid Config.", message: "Please verify the configuration.", preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in }
+        alertController.addAction(OKAction)
+        
+        self.present(alertController, animated: true) {}
     }
     
     @IBAction func selectPrinter(_ sender: Any) {
