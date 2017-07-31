@@ -37,13 +37,14 @@ class PrinterDetailViewController: UIViewController {
         }
     }
     
-    @IBAction func submitEdits(_ sender: Any) {        guard let printerHostURL = printerHost.text else { return }
-        guard let url = URL(string: printerHostURL) else { return }
-        guard let apiKey = apiKey.text else { return }
-        guard let cameraHostURL = cameraHost.text else { return }
-        guard let cameraHost = URL(string: cameraHostURL) else { return }
-        guard let username = username.text else { return }
-        guard let password = password.text else { return }
+    @IBAction func submitEdits(_ sender: Any) {
+        guard let printerHostURL = printerHost.text else { invalidConfig(); return }
+        guard let url = URL(string: printerHostURL) else { invalidConfig();  return }
+        guard let apiKey = apiKey.text else { invalidConfig(); return }
+        guard let cameraHostURL = cameraHost.text else { invalidConfig(); return }
+        guard let cameraHost = URL(string: cameraHostURL) else { invalidConfig(); return }
+        guard let username = username.text else { invalidConfig(); return }
+        guard let password = password.text else { invalidConfig(); return }
         
         let auth = basicAuth.isOn ? BasicAuth(
             username: username,
@@ -69,7 +70,6 @@ class PrinterDetailViewController: UIViewController {
         // Show Loading Symbol (Network).?
         OctoprintAPI.isApiWorking(for: tempConfig) { (working) in
             // Hide Loading Symbol (Network).?
-            
             if working {
                 // Don't replace Config. due to Ref. Semantics
                 if let config = printer?.config {
@@ -85,8 +85,14 @@ class PrinterDetailViewController: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             } else {
                 // Alert User that Printer Cred's Aren't Valid
+                
+                invalidConfig()
             }
         }
+    }
+    
+    func invalidConfig(){
+    
     }
     
     @IBAction func selectPrinter(_ sender: Any) {
