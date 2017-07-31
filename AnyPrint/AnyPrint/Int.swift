@@ -18,4 +18,18 @@ extension Int {
     
         return "\(hours):\(minutes):\(seconds)"
     }
+    
+    // Derived from: https://stackoverflow.com/a/44321852
+    func asDiskSpace() -> String {
+        return ByteCountFormatter.string(fromByteCount: Int64(self), countStyle: .file)
+    }
+    
+    // Derived from: http://www.codingexplorer.com/swiftly-getting-human-readable-date-nsdateformatter/
+    func asFormattedDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        
+        return formatter.string(from: Date(timeIntervalSince1970: TimeInterval(self)))
+    }
 }
