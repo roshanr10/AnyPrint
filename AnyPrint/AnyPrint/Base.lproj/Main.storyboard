@@ -203,11 +203,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="tRF-JH-iD0"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Nozzle"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="207"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hn5-tE-Gxy" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
                                 <rect key="frame" x="32" y="269" width="327" height="21"/>
@@ -215,11 +210,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="nNB-mB-UIS"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="toolName" value="Bed"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="actualTemp" value="53"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="targetTemp" value="0"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0o-xf-4q0" customClass="CurrentPrintJobView" customModule="AnyPrint" customModuleProvider="target">
                                 <rect key="frame" x="16" y="306" width="343" height="220"/>
