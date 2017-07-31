@@ -9,7 +9,7 @@
 import Foundation
 
 extension Int {
-    // https://stackoverflow.com/a/40794726
+    // Derived from: https://stackoverflow.com/a/40794726
     func asHMS() -> String {
         let hours   = self / 3600
         let minutes = (self % 3600) / 60
