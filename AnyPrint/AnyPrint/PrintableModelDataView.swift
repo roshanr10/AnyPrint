@@ -8,4 +8,10 @@
 
 import UIKit
 
-class PrintableModelDataView: CustomUIView {}
+class PrintableModelDataView: CustomUIView {
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var fileType: UILabel!
+    @IBOutlet weak var fileLocation: UILabel!
+    @IBOutlet weak var fileSize: UILabel!
+    @IBOutlet weak var uploadDate: UILabel!
+}

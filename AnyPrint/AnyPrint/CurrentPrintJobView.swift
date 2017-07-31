@@ -8,4 +8,10 @@
 
 import UIKit
 
-class CurrentPrintJobView: CustomUIView {}
+class CurrentPrintJobView: CustomUIView {
+    @IBOutlet weak var fileName: UILabel!
+    @IBOutlet weak var filamentUsed: UILabel!
+    @IBOutlet weak var approxTime: UILabel!
+    @IBOutlet weak var timeSpent: UILabel!
+    @IBOutlet weak var timeLeft: UILabel!
+}
