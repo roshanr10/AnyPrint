@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				512925541F28468B00FA07A6 /* Data Models */,
-				512925551F2846A400FA07A6 /* Networking */,
+				512925551F2846A400FA07A6 /* Networking Layer */,
 				51E77E161F2EB1E600853105 /* Extensions */,
 			);
 			name = Models;
@@ -137,12 +137,12 @@
 			name = "Data Models";
 			sourceTree = "<group>";
 		};
-		512925551F2846A400FA07A6 /* Networking */ = {
+		512925551F2846A400FA07A6 /* Networking Layer */ = {
 			isa = PBXGroup;
 			children = (
 				512925561F2846CE00FA07A6 /* OctoprintAPI.swift */,
 			);
-			name = Networking;
+			name = "Networking Layer";
 			sourceTree = "<group>";
 		};
 		5195C2821F1D46B00050DD92 = {

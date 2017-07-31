@@ -10,9 +10,7 @@ import Foundation
 import Alamofire
 
 class OctoprintAPI {
-    private struct paths {
-        
-    }
+    private struct paths {}
     
     static func getState(for config: PrinterConfig, closure: (PrinterState) -> ()) {
         // Alamofire.request("https://httpbin.org/get").responseJSON { response in }
@@ -25,4 +23,13 @@ class OctoprintAPI {
             }
         }*/
     }
+    
+    /*
+     * Addt. Features to Add...
+     * - Test API/Camera before Adding
+     * - Start Print from Models
+     * - Pause/Stop Print, Remove Stop Fans/Motors..?
+     * - RSA app verification, easy install as opposed to API key
+     * - Add possible lights facility ( may depend on backend plugin..)
+     */
 }
