@@ -18,7 +18,7 @@ struct PrintableModel {
     let location: PrintableModelLocation
     let type: PrintableModelType
     let size: Int
-    let upload: Date // Unix Timestamp
+    let upload: Int // Unix Timestamp
 
 }
 

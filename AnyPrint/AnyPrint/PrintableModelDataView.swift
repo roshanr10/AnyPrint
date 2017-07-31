@@ -14,4 +14,14 @@ class PrintableModelDataView: CustomUIView {
     @IBOutlet weak var fileLocation: UILabel!
     @IBOutlet weak var fileSize: UILabel!
     @IBOutlet weak var uploadDate: UILabel!
+    
+    var printableModel: PrintableModel? {
+        didSet {
+            name.text = printableModel?.name
+            fileType.text = printableModel?.type.rawValue
+            fileLocation.text = printableModel?.location.rawValue
+            fileSize.text = printableModel?.size.asDiskSpace()
+            uploadDate.text = printableModel?.upload.asFormattedDate()
+        }
+    }
 }
