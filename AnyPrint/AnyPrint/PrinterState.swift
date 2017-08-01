@@ -11,6 +11,7 @@ import Foundation
 struct PrinterState {
     let state: String
     let tools: [ToolTemperatureState]
+    let bed: ToolTemperatureState?
     
     let job: JobState?
 }

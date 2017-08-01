@@ -30,6 +30,7 @@ class OctoprintAPI {
                     PrinterState(
                         state: stateString,
                         tools: [],
+                        bed: nil,
                         job: nil
                     )
                 )
