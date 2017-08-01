@@ -36,6 +36,8 @@
 		51E77E181F2EC27000853105 /* CameraConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E77E171F2EC27000853105 /* CameraConfig.swift */; };
 		51E77E1A1F2EC28B00853105 /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E77E191F2EC28B00853105 /* BasicAuth.swift */; };
 		51E77E1C1F2EC2A400853105 /* PrinterAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E77E1B1F2EC2A400853105 /* PrinterAuth.swift */; };
+		51E77E1F1F313CF800853105 /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E77E1E1F313CF800853105 /* ModelViewController.swift */; };
+		51E77E211F313DD500853105 /* ModelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E77E201F313DD500853105 /* ModelDetailViewController.swift */; };
 		51EBCA531F2AACBD00B43255 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EBCA521F2AACBD00B43255 /* OverviewViewController.swift */; };
 		51EBCA551F2AACDD00B43255 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EBCA541F2AACDD00B43255 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,8 @@
 		51E77E171F2EC27000853105 /* CameraConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraConfig.swift; sourceTree = "<group>"; };
 		51E77E191F2EC28B00853105 /* BasicAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
 		51E77E1B1F2EC2A400853105 /* PrinterAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterAuth.swift; sourceTree = "<group>"; };
+		51E77E1E1F313CF800853105 /* ModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
+		51E77E201F313DD500853105 /* ModelDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDetailViewController.swift; sourceTree = "<group>"; };
 		51EBCA521F2AACBD00B43255 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		51EBCA541F2AACDD00B43255 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		66E366889691714C86934128 /* Pods-AnyPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyPrint.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnyPrint/Pods-AnyPrint.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			children = (
 				51EBCA521F2AACBD00B43255 /* OverviewViewController.swift */,
 				51EBCA541F2AACDD00B43255 /* DetailViewController.swift */,
+				51E77E1E1F313CF800853105 /* ModelViewController.swift */,
+				51E77E201F313DD500853105 /* ModelDetailViewController.swift */,
 				519123151F292D9A00E25547 /* PrinterViewController.swift */,
 				519123171F2A499B00E25547 /* PrinterDetailViewController.swift */,
 			);
@@ -412,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				519123181F2A499B00E25547 /* PrinterDetailViewController.swift in Sources */,
+				51E77E211F313DD500853105 /* ModelDetailViewController.swift in Sources */,
 				51EBCA551F2AACDD00B43255 /* DetailViewController.swift in Sources */,
 				5195C28F1F1D46B00050DD92 /* AppDelegate.swift in Sources */,
 				51770D921F1D5F880014271B /* MJPGCameraStreamView.swift in Sources */,
@@ -429,6 +436,7 @@
 				51BA900F1F1D934100718216 /* ToolTemperatureView.swift in Sources */,
 				519123161F292D9A00E25547 /* PrinterViewController.swift in Sources */,
 				51EBCA531F2AACBD00B43255 /* OverviewViewController.swift in Sources */,
+				51E77E1F1F313CF800853105 /* ModelViewController.swift in Sources */,
 				51E77E151F2EB1E200853105 /* Int.swift in Sources */,
 				519123121F29193D00E25547 /* Printers.swift in Sources */,
 				51BA901C1F1DBDFE00718216 /* PrintableModelDataView.swift in Sources */,
