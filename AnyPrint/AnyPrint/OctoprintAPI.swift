@@ -39,12 +39,14 @@ class OctoprintAPI {
         }
     }
     
-    static func getModels(for config: PrinterConfig, closure: (PrintableModels) -> ()) {
-        /*Alamofire.request("https://httpbin.org/get").responseJSON { response in
-            if let json = response.result.value {
-                print("JSON: \((json as? [String: Any])?["headers"])") // serialized json response
+    static func getModels(for config: PrinterConfig, closure: @escaping ([PrintableModel]?) -> ()) {
+        getJSON(from: config, path: paths.fileRequest) { (jsonDict) in
+            if let json = jsonDict {
+                closure([])
+            } else {
+                closure(nil)
             }
-        }*/
+        }
     }
     
     static func startPrint(for config: PrinterConfig, model: PrintableModel){
