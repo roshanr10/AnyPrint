@@ -12,6 +12,7 @@ import Alamofire
 class OctoprintAPI {
     private struct paths {
         static let stateRequest = "/api/printer"
+        static let jobStateRequest = "/api/printer"
         static let fileRequest  = "/api/files"
         static let jobRequest   = "/api/job"
     }
@@ -21,8 +22,21 @@ class OctoprintAPI {
         closure(true)
     }
     
-    static func getState(for config: PrinterConfig, closure: (PrinterState) -> ()) {
-        // Alamofire.request("https://httpbin.org/get").responseJSON { response in }
+    static func getState(for config: PrinterConfig, closure: @escaping (PrinterState?) -> ()) {
+        getJSON(from: config, path: paths.stateRequest) { (jsonDict) in
+            if let json = jsonDict,
+                let stateString = (json["state"] as? [String: Any])?["text"] as? String {
+                closure(
+                    PrinterState(
+                        state: stateString,
+                        tools: [],
+                        job: nil
+                    )
+                )
+            } else {
+                closure(nil)
+            }
+        }
     }
     
     static func getModels(for config: PrinterConfig, closure: (PrintableModels) -> ()) {
@@ -34,42 +48,55 @@ class OctoprintAPI {
     }
     
     static func startPrint(for config: PrinterConfig, model: PrintableModel){
-    
+        postJSON(to: config, path: paths.jobRequest, data: [
+            "command": "start"
+        ])
     }
     
     static func pausePrint(for config: PrinterConfig){
-        // Derived from: https://stackoverflow.com/questions/27026916/sending-json-array-via-alamofire
-        var request = URLRequest(url: config.url)
-        request.httpMethod = "POST"
-        request.setValue(config.auth.apiKey, forHTTPHeaderField: "X-Api-Key")
-        
-        request.httpBody = try! JSONSerialization.data(withJSONObject:  [
+        postJSON(to: config, path: paths.jobRequest, data: [
             "command": "pause",
             "action": "pause"
         ])
-        
-        Alamofire
-            .request(request)
-            .authenticate(user: config.auth.http!.username!, password: config.auth.http!.password!)
-            .responseJSON { response in }
     }
     
     static func stopPrint(for config: PrinterConfig){
+        postJSON(to: config, path: paths.jobRequest, data: [
+            "command": "cancel"
+        ])
+    }
+
+    static func getJSON(from config: PrinterConfig, path: String, closure: @escaping ([String: Any]?) -> ()){
+        var request = URLRequest(url: config.url.appendingPathComponent(path))
+        request.httpMethod = "GET"
+        request.setValue(config.auth.apiKey, forHTTPHeaderField: "X-Api-Key")
+        
+        Alamofire
+            .request(request)
+            .authenticate(user: config.auth.http!.username!, password: config.auth.http!.password!)
+            .responseJSON { response in
+                if let result = response.result.value,
+                    let JSON = result as? [String: Any] {
+                    closure(JSON)
+                } else {
+                    closure(nil)
+                }
+        }
+    }
+    
+    static func postJSON(to config: PrinterConfig, path: String, data: Any){
         // Derived from: https://stackoverflow.com/questions/27026916/sending-json-array-via-alamofire
-        var request = URLRequest(url: config.url)
+        var request = URLRequest(url: config.url.appendingPathComponent(path))
         request.httpMethod = "POST"
         request.setValue(config.auth.apiKey, forHTTPHeaderField: "X-Api-Key")
         
-        request.httpBody = try! JSONSerialization.data(withJSONObject:  [
-            "command": "cancel"
-            ])
+        request.httpBody = try? JSONSerialization.data(withJSONObject:  data)
         
         Alamofire
             .request(request)
             .authenticate(user: config.auth.http!.username!, password: config.auth.http!.password!)
             .responseJSON { response in }
     }
-
     
     /*
      * Addt. Features to Add...
