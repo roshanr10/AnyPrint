@@ -10,7 +10,7 @@ import Foundation
 
 struct PrinterState {
     let state: String
-    let tools: [ToolTemperatureState]
+    let hotend: ToolTemperatureState?
     let bed: ToolTemperatureState?
     
     let job: JobState?

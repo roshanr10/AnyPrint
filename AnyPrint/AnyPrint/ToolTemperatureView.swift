@@ -25,6 +25,8 @@ class ToolTemperatureView: CustomUIView {
     
     var state: ToolTemperatureState? {
         didSet {
+            self.isHidden = state == nil
+            
             toolNameLabel.text    = self.state?.toolName
 
             actualTempLabel.text  = String(format:"%.1f",  self.state?.actualTemp ?? 0)

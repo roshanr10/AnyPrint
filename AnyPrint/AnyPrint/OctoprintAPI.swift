@@ -25,15 +25,21 @@ class OctoprintAPI {
     static func getState(for config: PrinterConfig, closure: @escaping (PrinterState?) -> ()) {
         getJSON(from: config, path: paths.stateRequest) { (jsonDict) in
             if let json = jsonDict,
-                let stateString = (json["state"] as? [String: Any])?["text"] as? String {
-                closure(
-                    PrinterState(
+                let stateObject = json["state"] as? [String: Any],
+                let stateString = stateObject["text"] as? String,
+                let temperatureObject = json["temperature"] as? [String: Any],
+                let bedTemp = temperatureObject["bed"] as? [String: Any],
+                let bedTempActual = bedTemp["actual"] as? Double,
+                let bedTempTarget = bedTemp["target"] as? Double,
+                let hotendTemp = temperatureObject["tool0"] as? [String: Any],
+                let hotendTempActual = hotendTemp["actual"] as? Double,
+                let hotendTempTarget = hotendTemp["target"] as? Double{
+                    closure(PrinterState(
                         state: stateString,
-                        tools: [],
-                        bed: nil,
+                        hotend: ToolTemperatureState(toolName: "Hotend", actualTemp: hotendTempActual, targetTemp: hotendTempTarget),
+                        bed: ToolTemperatureState(toolName: "Bed", actualTemp: bedTempActual, targetTemp: bedTempTarget),
                         job: nil
-                    )
-                )
+                    ))
             } else {
                 closure(nil)
             }

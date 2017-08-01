@@ -18,6 +18,8 @@ class CurrentPrintJobView: CustomUIView {
     
     var currentPrintJob: JobState? {
         didSet {
+            self.isHidden = currentPrintJob == nil
+            
             fileName.text = currentPrintJob?.job
             filamentUsed.text = "\(currentPrintJob?.filament.length ?? 0)m / \(currentPrintJob?.filament.volume ?? 0)cm³"
             

@@ -25,11 +25,7 @@ class OverviewViewController: UIViewController {
         printerName.text = Printers.sharedInstance.selected?.config.name
         printerStatus.text = Printers.sharedInstance.selected?.state?.state
         
-        if let tools = Printers.sharedInstance.selected?.state?.tools,
-            tools.count > 0 {
-            hotend.state = tools[0]
-        }
-        
+        hotend.state = Printers.sharedInstance.selected?.state?.hotend
         bed.state = Printers.sharedInstance.selected?.state?.bed
         
         currentJob.currentPrintJob = Printers.sharedInstance.selected?.state?.job
