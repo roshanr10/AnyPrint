@@ -11,7 +11,9 @@ import Alamofire
 
 class OctoprintAPI {
     private struct paths {
-        static let jobRequest = "/api/job"
+        static let stateRequest = "/api/printer"
+        static let fileRequest  = "/api/files"
+        static let jobRequest   = "/api/job"
     }
     
     static func isApiWorking(for config: PrinterConfig, closure: (Bool) -> ()){
