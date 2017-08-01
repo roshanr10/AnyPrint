@@ -10,7 +10,9 @@ import Foundation
 import Alamofire
 
 class OctoprintAPI {
-    private struct paths {}
+    private struct paths {
+        static let jobRequest = "/api/job"
+    }
     
     static func isApiWorking(for config: PrinterConfig, closure: (Bool) -> ()){
         // Placeholder for Future Verification
@@ -34,7 +36,7 @@ class OctoprintAPI {
     }
     
     static func pausePrint(for config: PrinterConfig){
-    
+        // Alamofire.request(config.url.appendingPathComponent(paths.jobRequest), headers: ["X-Api-Key": config.auth.apiKey]).responseJSON { _ in }
     }
     
     static func stopPrint(for config: PrinterConfig){
