@@ -16,4 +16,16 @@ class DetailViewController: UIViewController {
         
         cameraStream.cameraConfig = Printers.sharedInstance.selected?.config.camera
     }
+    
+    @IBAction func pausePrint(_ sender: Any) {
+        if let config = Printers.sharedInstance.selected?.config {
+            OctoprintAPI.pausePrint(for: config)
+        }
+    }
+    
+    @IBAction func stopPrint(_ sender: Any) {
+        if let config = Printers.sharedInstance.selected?.config {
+            OctoprintAPI.stopPrint(for: config)
+        }
+    }
 }

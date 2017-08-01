@@ -38,11 +38,36 @@ class OctoprintAPI {
     }
     
     static func pausePrint(for config: PrinterConfig){
-        // Alamofire.request(config.url.appendingPathComponent(paths.jobRequest), headers: ["X-Api-Key": config.auth.apiKey]).responseJSON { _ in }
+        // Derived from: https://stackoverflow.com/questions/27026916/sending-json-array-via-alamofire
+        var request = URLRequest(url: config.url)
+        request.httpMethod = "POST"
+        request.setValue(config.auth.apiKey, forHTTPHeaderField: "X-Api-Key")
+        
+        request.httpBody = try! JSONSerialization.data(withJSONObject:  [
+            "command": "pause",
+            "action": "pause"
+        ])
+        
+        Alamofire
+            .request(request)
+            .authenticate(user: config.auth.http!.username!, password: config.auth.http!.password!)
+            .responseJSON { response in }
     }
     
     static func stopPrint(for config: PrinterConfig){
-    
+        // Derived from: https://stackoverflow.com/questions/27026916/sending-json-array-via-alamofire
+        var request = URLRequest(url: config.url)
+        request.httpMethod = "POST"
+        request.setValue(config.auth.apiKey, forHTTPHeaderField: "X-Api-Key")
+        
+        request.httpBody = try! JSONSerialization.data(withJSONObject:  [
+            "command": "cancel"
+            ])
+        
+        Alamofire
+            .request(request)
+            .authenticate(user: config.auth.http!.username!, password: config.auth.http!.password!)
+            .responseJSON { response in }
     }
 
     
