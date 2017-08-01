@@ -15,7 +15,6 @@ struct PrintableModel {
     let type: PrintableModelType
     let size: Int
     let upload: Int // Unix Timestamp
-
 }
 
 enum PrintableModelLocation: String {
