@@ -29,15 +29,15 @@ class OctoprintAPI {
         }*/
     }
     
-    static func startPrint(for config: PrinterConfig, model: PrintableModel, closure: () -> ()){
+    static func startPrint(for config: PrinterConfig, model: PrintableModel){
     
     }
     
-    static func pausePrint(for config: PrinterConfig, closure: () -> ()){
+    static func pausePrint(for config: PrinterConfig){
     
     }
     
-    static func stopPrint(for config: PrinterConfig, closure: () -> ()){
+    static func stopPrint(for config: PrinterConfig){
     
     }
 
