@@ -20,7 +20,7 @@ class PrinterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier, for: indexPath)
         
-        cell.textLabel?.text = Printers.sharedInstance.printers[indexPath.row].config.url.absoluteString
+        cell.textLabel?.text = Printers.sharedInstance.printers[indexPath.row].config.name
         cell.accessoryType = Printers.sharedInstance.printers[indexPath.row] == Printers.sharedInstance.selected ? .checkmark : .none
         
         return cell

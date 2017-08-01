@@ -11,6 +11,7 @@ import UIKit
 class PrinterDetailViewController: UIViewController {
     var printer: Printer?
     
+    @IBOutlet weak var printerName: UITextField!
     @IBOutlet weak var printerHost: UITextField!
     @IBOutlet weak var apiKey: UITextField!
     @IBOutlet weak var cameraHost: UITextField!
@@ -21,6 +22,7 @@ class PrinterDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         if let config = printer?.config {
+            printerName.text = config.name
             printerHost.text = config.url.absoluteString
             apiKey.text = config.auth.apiKey
             
@@ -38,6 +40,7 @@ class PrinterDetailViewController: UIViewController {
     }
     
     @IBAction func submitEdits(_ sender: Any) {
+        guard let printerName = printerName.text else { invalidConfig(); return }
         guard let printerHostURL = printerHost.text else { invalidConfig(); return }
         guard let url = URL(string: printerHostURL) else { invalidConfig();  return }
         guard let apiKey = apiKey.text else { invalidConfig(); return }
@@ -62,6 +65,7 @@ class PrinterDetailViewController: UIViewController {
         )
         
         let tempConfig = PrinterConfig(
+            name: printerName,
             url: url,
             camera: cameraConfig,
             auth: printerAuth
@@ -73,6 +77,7 @@ class PrinterDetailViewController: UIViewController {
             if working {
                 // Don't replace Config. due to Ref. Semantics
                 if let config = printer?.config {
+                    config.name = tempConfig.name
                     config.url = tempConfig.url
                     config.camera = tempConfig.camera
                     config.auth = tempConfig.auth

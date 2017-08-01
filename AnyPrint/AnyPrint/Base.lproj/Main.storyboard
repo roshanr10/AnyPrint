@@ -179,13 +179,13 @@
                                     <constraint firstAttribute="width" constant="130" id="ptA-8L-c7U"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roshan's Prusa i3 MK2S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20b-Vs-rwy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Printer Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20b-Vs-rwy">
                                 <rect key="frame" x="156" y="90" width="203" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Operational" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZo-iU-ZXT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZo-iU-ZXT">
                                 <rect key="frame" x="156" y="127" width="203" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
@@ -248,7 +248,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" image="overview" id="KYD-cc-NUL"/>
                     <connections>
+                        <outlet property="bed" destination="hn5-tE-Gxy" id="Nrv-de-G0v"/>
                         <outlet property="cameraStream" destination="wob-Qi-evl" id="bjw-Iz-xPf"/>
+                        <outlet property="currentJob" destination="I0o-xf-4q0" id="veV-mA-319"/>
+                        <outlet property="hotend" destination="7W8-Zl-OQI" id="Nqi-mX-BZP"/>
+                        <outlet property="printerName" destination="20b-Vs-rwy" id="1J0-Aa-pUo"/>
+                        <outlet property="printerStatus" destination="XZo-iU-ZXT" id="Dkm-Uh-cOs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijB-Ka-A0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -355,70 +360,76 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://octopi.local/" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffo-4e-0eR">
-                                <rect key="frame" x="140" y="77" width="219" height="30"/>
+                                <rect key="frame" x="140" y="114" width="219" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Printer Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzP-pU-g53">
+                                <rect key="frame" x="16" y="117" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Printer Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwM-gU-4Ab">
                                 <rect key="frame" x="16" y="80" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2519135B4C5A19BA0746BEF153" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dr8-f2-KX9">
-                                <rect key="frame" x="140" y="114" width="219" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPE-v5-TBS">
-                                <rect key="frame" x="16" y="117" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mE5-2s-DTs">
-                                <rect key="frame" x="140" y="241" width="219" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37Y-DL-WMp">
-                                <rect key="frame" x="16" y="244" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Authentication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoC-iF-P8A">
-                                <rect key="frame" x="16" y="207" width="157" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lt-7y-xXW">
-                                <rect key="frame" x="140" y="278" width="219" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bec-m3-GCz">
-                                <rect key="frame" x="16" y="281" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-5V-0EY">
-                                <rect key="frame" x="310" y="202" width="51" height="31"/>
-                            </switch>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://octopi.local/webcam/?action=stream" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TF3-JO-4oL">
                                 <rect key="frame" x="140" y="151" width="219" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXP-0j-fwx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPE-v5-TBS">
                                 <rect key="frame" x="16" y="154" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mE5-2s-DTs">
+                                <rect key="frame" x="140" y="278" width="219" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37Y-DL-WMp">
+                                <rect key="frame" x="16" y="281" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Authentication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoC-iF-P8A">
+                                <rect key="frame" x="16" y="244" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lt-7y-xXW">
+                                <rect key="frame" x="140" y="315" width="219" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bec-m3-GCz">
+                                <rect key="frame" x="16" y="318" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-5V-0EY">
+                                <rect key="frame" x="310" y="239" width="51" height="31"/>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://octopi.local/webcam/?action=stream" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TF3-JO-4oL">
+                                <rect key="frame" x="140" y="188" width="219" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXP-0j-fwx">
+                                <rect key="frame" x="16" y="191" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -430,11 +441,18 @@
                                     <action selector="selectPrinter:" destination="EZ1-AR-51l" eventType="touchUpInside" id="fl1-yJ-v9u"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My 3D Printer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOE-Og-LWc">
+                                <rect key="frame" x="140" y="77" width="219" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TF3-JO-4oL" firstAttribute="trailing" secondItem="dr8-f2-KX9" secondAttribute="trailing" id="2Sm-nX-q0a"/>
                             <constraint firstItem="ffo-4e-0eR" firstAttribute="leading" secondItem="PzP-pU-g53" secondAttribute="trailing" constant="20" id="2by-hd-DZH"/>
+                            <constraint firstItem="XOE-Og-LWc" firstAttribute="trailing" secondItem="ffo-4e-0eR" secondAttribute="trailing" id="2ki-9i-muc"/>
                             <constraint firstItem="dr8-f2-KX9" firstAttribute="trailing" secondItem="ffo-4e-0eR" secondAttribute="trailing" id="3V2-3P-AIB"/>
                             <constraint firstItem="bec-m3-GCz" firstAttribute="leading" secondItem="37Y-DL-WMp" secondAttribute="leading" id="43a-wi-pXh"/>
                             <constraint firstItem="Lxk-5V-0EY" firstAttribute="centerY" secondItem="GoC-iF-P8A" secondAttribute="centerY" id="4f3-nz-GLe"/>
@@ -458,21 +476,27 @@
                             <constraint firstItem="TF3-JO-4oL" firstAttribute="leading" secondItem="dr8-f2-KX9" secondAttribute="leading" id="Pd3-xU-VSl"/>
                             <constraint firstItem="GXP-0j-fwx" firstAttribute="trailing" secondItem="gPE-v5-TBS" secondAttribute="trailing" id="RiS-x4-nX3"/>
                             <constraint firstItem="6lt-7y-xXW" firstAttribute="trailing" secondItem="mE5-2s-DTs" secondAttribute="trailing" id="SK0-5O-OaZ"/>
+                            <constraint firstItem="XOE-Og-LWc" firstAttribute="leading" secondItem="ffo-4e-0eR" secondAttribute="leading" id="TNg-G4-0sI"/>
+                            <constraint firstItem="cwM-gU-4Ab" firstAttribute="trailing" secondItem="PzP-pU-g53" secondAttribute="trailing" id="UBL-Zm-nhB"/>
+                            <constraint firstItem="cwM-gU-4Ab" firstAttribute="top" secondItem="x6p-eR-oRB" secondAttribute="bottom" constant="16" id="Uhm-MO-yaK"/>
                             <constraint firstItem="TBp-9V-i7x" firstAttribute="leading" secondItem="2Th-Ge-uS9" secondAttribute="leadingMargin" id="Xno-iP-gvB"/>
+                            <constraint firstItem="cwM-gU-4Ab" firstAttribute="leading" secondItem="PzP-pU-g53" secondAttribute="leading" id="Y1c-eU-uuq"/>
                             <constraint firstItem="dr8-f2-KX9" firstAttribute="leading" secondItem="ffo-4e-0eR" secondAttribute="leading" id="YgJ-P6-elX"/>
                             <constraint firstItem="TF3-JO-4oL" firstAttribute="baseline" secondItem="GXP-0j-fwx" secondAttribute="baseline" id="YrY-E7-L2P"/>
                             <constraint firstItem="GXP-0j-fwx" firstAttribute="leading" secondItem="gPE-v5-TBS" secondAttribute="leading" id="ZCX-fY-uWI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ffo-4e-0eR" secondAttribute="trailing" id="cMR-rC-chU"/>
                             <constraint firstItem="gPE-v5-TBS" firstAttribute="top" secondItem="PzP-pU-g53" secondAttribute="bottom" constant="16" id="d1n-rg-GTX"/>
                             <constraint firstItem="6lt-7y-xXW" firstAttribute="leading" secondItem="bec-m3-GCz" secondAttribute="trailing" constant="20" id="eEG-2K-Dr1"/>
+                            <constraint firstItem="XOE-Og-LWc" firstAttribute="leading" secondItem="cwM-gU-4Ab" secondAttribute="trailing" constant="20" id="fD4-zM-mfZ"/>
                             <constraint firstItem="GoC-iF-P8A" firstAttribute="top" secondItem="GXP-0j-fwx" secondAttribute="bottom" constant="32" id="fHI-KQ-tHu"/>
+                            <constraint firstItem="PzP-pU-g53" firstAttribute="top" secondItem="cwM-gU-4Ab" secondAttribute="bottom" constant="16" id="mVR-Rg-dTd"/>
                             <constraint firstItem="dr8-f2-KX9" firstAttribute="leading" secondItem="gPE-v5-TBS" secondAttribute="trailing" constant="20" id="muE-5C-pE8"/>
                             <constraint firstItem="6lt-7y-xXW" firstAttribute="leading" secondItem="mE5-2s-DTs" secondAttribute="leading" id="muW-gJ-mN1"/>
                             <constraint firstItem="dr8-f2-KX9" firstAttribute="baseline" secondItem="gPE-v5-TBS" secondAttribute="baseline" id="o2K-xx-2By"/>
+                            <constraint firstItem="XOE-Og-LWc" firstAttribute="baseline" secondItem="cwM-gU-4Ab" secondAttribute="baseline" id="qRy-uu-nbw"/>
                             <constraint firstItem="37Y-DL-WMp" firstAttribute="top" secondItem="GoC-iF-P8A" secondAttribute="bottom" constant="16" id="qU2-d9-dz6"/>
                             <constraint firstItem="gPE-v5-TBS" firstAttribute="leading" secondItem="PzP-pU-g53" secondAttribute="leading" id="qyV-w4-UDK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TBp-9V-i7x" secondAttribute="trailing" id="rEM-ic-en2"/>
-                            <constraint firstItem="PzP-pU-g53" firstAttribute="top" secondItem="x6p-eR-oRB" secondAttribute="bottom" constant="16" id="rG7-Zu-89H"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -490,6 +514,7 @@
                         <outlet property="cameraHost" destination="TF3-JO-4oL" id="f2Q-tA-7bE"/>
                         <outlet property="password" destination="6lt-7y-xXW" id="Gdt-LK-JRk"/>
                         <outlet property="printerHost" destination="ffo-4e-0eR" id="aR5-Lk-UcE"/>
+                        <outlet property="printerName" destination="XOE-Og-LWc" id="SbQ-TH-6kn"/>
                         <outlet property="username" destination="mE5-2s-DTs" id="T4I-MJ-oig"/>
                     </connections>
                 </viewController>
