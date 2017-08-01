@@ -12,7 +12,7 @@ class Printer: NSObject, NSCoding {
     var config: PrinterConfig
     var state: PrinterState?
     
-    var models: PrintableModels?
+    var models: [PrintableModel]?
     
     init(_ config: PrinterConfig) {
         self.config = config

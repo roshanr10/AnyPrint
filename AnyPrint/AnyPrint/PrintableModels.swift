@@ -8,10 +8,6 @@
 
 import Foundation
 
-struct PrintableModels {
-    let models: [PrintableModel]
-}
-
 struct PrintableModel {
     let name: String
     let path: String
