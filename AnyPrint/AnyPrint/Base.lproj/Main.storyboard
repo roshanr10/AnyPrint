@@ -191,28 +191,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ku0-dt-9dj">
-                                <rect key="frame" x="16" y="211" width="103" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7W8-Zl-OQI" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
-                                <rect key="frame" x="32" y="240" width="327" height="21"/>
+                                <rect key="frame" x="16" y="208" width="343" height="21"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="tRF-JH-iD0"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hn5-tE-Gxy" customClass="ToolTemperatureView" customModule="AnyPrint" customModuleProvider="target">
-                                <rect key="frame" x="32" y="269" width="327" height="21"/>
+                                <rect key="frame" x="16" y="237" width="343" height="21"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="nNB-mB-UIS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0o-xf-4q0" customClass="CurrentPrintJobView" customModule="AnyPrint" customModuleProvider="target">
-                                <rect key="frame" x="16" y="306" width="343" height="220"/>
+                                <rect key="frame" x="16" y="274" width="343" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="AWI-cv-mWh"/>
@@ -228,12 +222,10 @@
                             <constraint firstItem="I0o-xf-4q0" firstAttribute="top" secondItem="hn5-tE-Gxy" secondAttribute="bottom" constant="16" id="FqM-lz-Xqg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hn5-tE-Gxy" secondAttribute="trailing" id="K2B-t6-aYZ"/>
                             <constraint firstItem="i7i-No-r5k" firstAttribute="top" secondItem="RyR-R6-KBt" secondAttribute="bottom" id="KL1-LH-gXv"/>
-                            <constraint firstItem="7W8-Zl-OQI" firstAttribute="top" secondItem="Ku0-dt-9dj" secondAttribute="bottom" constant="8" id="Nbk-wp-F34"/>
-                            <constraint firstItem="Ku0-dt-9dj" firstAttribute="leading" secondItem="7W8-Zl-OQI" secondAttribute="leading" constant="-16" id="OgD-ly-gbx"/>
                             <constraint firstItem="hn5-tE-Gxy" firstAttribute="trailing" secondItem="7W8-Zl-OQI" secondAttribute="trailing" id="Ojq-6C-E8q"/>
+                            <constraint firstItem="7W8-Zl-OQI" firstAttribute="top" secondItem="wob-Qi-evl" secondAttribute="bottom" constant="30" id="Qzf-jZ-ha6"/>
                             <constraint firstItem="i7i-No-r5k" firstAttribute="leading" secondItem="0kJ-Zc-Yys" secondAttribute="leadingMargin" constant="-16" id="Rwp-jx-X4C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I0o-xf-4q0" secondAttribute="trailing" id="SEa-Dv-Rbi"/>
-                            <constraint firstItem="Ku0-dt-9dj" firstAttribute="leading" secondItem="0kJ-Zc-Yys" secondAttribute="leadingMargin" id="TT7-in-jhj"/>
                             <constraint firstItem="I0o-xf-4q0" firstAttribute="leading" secondItem="0kJ-Zc-Yys" secondAttribute="leadingMargin" id="c4i-bW-vQ9"/>
                             <constraint firstItem="XZo-iU-ZXT" firstAttribute="centerY" secondItem="wob-Qi-evl" secondAttribute="centerY" constant="15" id="cse-iY-VCj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wob-Qi-evl" secondAttribute="leading" id="eju-8p-ZyS"/>
@@ -241,8 +233,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="20b-Vs-rwy" secondAttribute="trailing" id="jDM-AB-LYc"/>
                             <constraint firstItem="20b-Vs-rwy" firstAttribute="leading" secondItem="wob-Qi-evl" secondAttribute="trailing" constant="10" id="qWb-DX-MJh"/>
                             <constraint firstItem="hn5-tE-Gxy" firstAttribute="top" secondItem="7W8-Zl-OQI" secondAttribute="bottom" constant="8" id="tfG-Ox-plf"/>
-                            <constraint firstItem="Ku0-dt-9dj" firstAttribute="top" secondItem="wob-Qi-evl" secondAttribute="bottom" constant="33" id="u07-2b-274"/>
                             <constraint firstItem="20b-Vs-rwy" firstAttribute="top" secondItem="wob-Qi-evl" secondAttribute="top" constant="10" id="x1T-dg-omZ"/>
+                            <constraint firstItem="7W8-Zl-OQI" firstAttribute="leading" secondItem="0kJ-Zc-Yys" secondAttribute="leadingMargin" id="xdP-7Y-CI6"/>
                             <constraint firstItem="XZo-iU-ZXT" firstAttribute="leading" secondItem="20b-Vs-rwy" secondAttribute="leading" id="zXr-d4-IXw"/>
                         </constraints>
                     </view>
