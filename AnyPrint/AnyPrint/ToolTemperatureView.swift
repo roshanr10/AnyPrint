@@ -35,4 +35,16 @@ class ToolTemperatureView: CustomUIView {
             // solely for future proofing
         }
     }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        if state == nil { self.isHidden = true }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        if state == nil { self.isHidden = true }
+    }
 }

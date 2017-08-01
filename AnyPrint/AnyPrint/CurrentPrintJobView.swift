@@ -28,4 +28,16 @@ class CurrentPrintJobView: CustomUIView {
             progressBar.progress = Float(currentPrintJob?.percentComplete ?? 0)
         }
     }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        if currentPrintJob == nil { self.isHidden = true }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        if currentPrintJob == nil { self.isHidden = true }
+    }
 }
