@@ -16,7 +16,7 @@ extension Int {
         let minutes = (self % 3600) / 60
         let seconds = (self % 3600) % 60
     
-        return "\(hours):\(minutes):\(seconds)"
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
     // Derived from: https://stackoverflow.com/a/44321852
