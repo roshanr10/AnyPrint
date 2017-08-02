@@ -103,11 +103,8 @@ class OctoprintAPI {
     }
     
     static func startPrint(for config: PrinterConfig, model: PrintableModel){
-        // TODO: SELECT MODEL
+        // TODO: SELECT & PRINT MODEL
         
-        postJSON(to: config, path: paths.jobRequest, data: [
-            "command": "start"
-        ])
     }
     
     static func pausePrint(for config: PrinterConfig){
