@@ -19,8 +19,7 @@ class Printer: NSObject, NSCoding {
         
         super.init()
         
-        reloadState()
-        reloadModels()
+        reload()
     }
     
     private struct PropertyKey {
@@ -37,11 +36,8 @@ class Printer: NSObject, NSCoding {
         aCoder.encode(config, forKey: PropertyKey.config)
     }
     
-    func reloadState(){
+    func reload(){
         OctoprintAPI.getState(for: config)  { (state) in self.state = state }
-    }
-
-    func reloadModels(){
         OctoprintAPI.getModels(for: config) { (models) in self.models = models }
     }
 }
