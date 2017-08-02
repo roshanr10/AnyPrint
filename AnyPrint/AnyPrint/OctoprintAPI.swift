@@ -77,11 +77,25 @@ class OctoprintAPI {
         }
     }
 
-    
     static func getModels(for config: PrinterConfig, closure: @escaping ([PrintableModel]?) -> ()) {
         getJSON(from: config, path: paths.fileRequest) { (jsonDict) in
-            if let json = jsonDict {
-                closure([])
+            if let json = jsonDict,
+                let files = json["files"] as? [[String: Any]]{
+                    let models: [PrintableModel] = files.map({ file in
+                        if let name = file["name"] as? String {
+                            return PrintableModel(
+                                name: name,
+                                path: "",
+                                location: .local, //PrintableModelLocation(rawValue: ""),
+                                type: .model, //PrintableModelType(rawValue: ""),
+                                size: 0,
+                                upload: 0)
+                        } else {
+                            return nil
+                        }
+                    }).flatMap({ $0 })
+                    
+                    closure(models)
             } else {
                 closure(nil)
             }
@@ -89,6 +103,8 @@ class OctoprintAPI {
     }
     
     static func startPrint(for config: PrinterConfig, model: PrintableModel){
+        // TODO: SELECT MODEL
+        
         postJSON(to: config, path: paths.jobRequest, data: [
             "command": "start"
         ])
