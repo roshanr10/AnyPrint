@@ -110,8 +110,12 @@ class OctoprintAPI {
     }
     
     static func startPrint(for config: PrinterConfig, model: PrintableModel){
-        // TODO: SELECT & PRINT MODEL
+        let printPath = "\(paths.fileRequest)/\(model.location.rawValue)/\(model.path)"
         
+        postJSON(to: config, path: printPath, data: [
+            "command": "select",
+            "print": "true"
+        ])
     }
     
     static func pausePrint(for config: PrinterConfig){
@@ -145,28 +149,29 @@ class OctoprintAPI {
         }
     }
     
-    static func postJSON(to config: PrinterConfig, path: String, data: Any){
+    static func postJSON(to config: PrinterConfig, path: String, data: Parameters){
         postJSON(to: config, path: path, data: data) { response in }
     }
     
-    static func postJSON(to config: PrinterConfig, path: String, data: Any, closure: @escaping ([String: Any]?) -> ()){
-        // Derived from: https://stackoverflow.com/questions/27026916/sending-json-array-via-alamofire
-        var request = URLRequest(url: config.url.appendingPathComponent(path))
-        request.httpMethod = "POST"
-        request.setValue(config.auth.apiKey, forHTTPHeaderField: "X-Api-Key")
+    static func postJSON(to config: PrinterConfig, path: String, data: Parameters, closure: @escaping ([String: Any]?) -> ()){
+        let url = config.url.appendingPathComponent(path)
         
-        request.httpBody = try? JSONSerialization.data(withJSONObject:  data)
+        let headers: HTTPHeaders = [
+            "X-Api-Key": config.auth.apiKey
+        ]
         
         Alamofire
-            .request(request)
+            .request(url, method: .post, parameters: data, encoding: JSONEncoding.default, headers: headers)
             .authenticate(user: config.auth.http!.username!, password: config.auth.http!.password!)
-            .responseJSON { response in
-                if let result = response.result.value,
-                    let JSON = result as? [String: Any] {
-                    closure(JSON)
-                } else {
-                    closure(nil)
-                }
+            .response { response in
+               
+                print(response)
+//                if let result = response.result.value,
+//                    let JSON = result as? [String: Any] {
+//                    closure(JSON)
+//                } else {
+//                    closure(nil)
+//                }
             }
     }
     
