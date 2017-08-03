@@ -17,9 +17,17 @@ class OverviewViewController: UIViewController {
     @IBOutlet weak var bed: ToolTemperatureView!
     @IBOutlet weak var currentJob: CurrentPrintJobView!
     
+    override func viewDidLoad() {
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: .printerStateChange, object: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        reloadData()
+    }
+    
+    @objc func reloadData(){
         cameraStream.cameraConfig = Printers.sharedInstance.selected?.config.camera
         
         printerName.text = Printers.sharedInstance.selected?.config.name

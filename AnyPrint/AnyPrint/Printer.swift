@@ -37,7 +37,20 @@ class Printer: NSObject, NSCoding {
     }
     
     func reload(){
-        OctoprintAPI.getState(for: config)  { (state) in self.state = state }
-        OctoprintAPI.getModels(for: config) { (models) in self.models = models }
+        OctoprintAPI.getState(for: config)  { state in
+            self.state = state
+            NotificationCenter.default.post(name: .printerStateChange, object: nil)
+        }
+        
+        OctoprintAPI.getModels(for: config) { models in
+            self.models = models
+            NotificationCenter.default.post(name: .printerModelChange, object: nil)
+        }
     }
+}
+
+// Derived from: https://medium.com/@JoyceMatos/using-nsnotificationcenter-in-swift-eb70cf0b60fc
+extension Notification.Name {
+    static let printerStateChange = Notification.Name("printerStateChange")
+    static let printerModelChange = Notification.Name("printerModelChange")
 }
