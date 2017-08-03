@@ -11,11 +11,11 @@ import Foundation
 extension Int {
     // Derived from: https://stackoverflow.com/a/40794726
     func asHMS() -> String {
-        // TODO: Review https://stackoverflow.com/a/35215847
         let hours   = self / 3600
         let minutes = (self % 3600) / 60
         let seconds = (self % 3600) % 60
     
+        // Derived from https://stackoverflow.com/a/35215847
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
