@@ -82,14 +82,21 @@ class OctoprintAPI {
             if let json = jsonDict,
                 let files = json["files"] as? [[String: Any]]{
                     let models: [PrintableModel] = files.map({ file in
-                        if let name = file["name"] as? String {
-                            return PrintableModel(
-                                name: name,
-                                path: "",
-                                location: .local, //PrintableModelLocation(rawValue: ""),
-                                type: .model, //PrintableModelType(rawValue: ""),
-                                size: 0,
-                                upload: 0)
+                        if let name = file["name"] as? String,
+                            let path = file["path"] as? String,
+                            let typeString = file["type"] as? String,
+                            let modelType = PrintableModelType(rawValue: typeString),
+                            let size = file["size"] as? Int,
+                            let date = file["date"] as? Int,
+                            let locationString = file["origin"] as? String,
+                            let location = PrintableModelLocation(rawValue: locationString){
+                                return PrintableModel(
+                                    name: name,
+                                    path: path,
+                                    location: location,
+                                    type: modelType,
+                                    size: size,
+                                    upload: date)
                         } else {
                             return nil
                         }

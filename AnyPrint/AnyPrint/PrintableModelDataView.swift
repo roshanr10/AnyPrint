@@ -18,8 +18,8 @@ class PrintableModelDataView: CustomUIView {
     var printableModel: PrintableModel? {
         didSet {
             name.text = printableModel?.name
-            fileType.text = printableModel?.type.rawValue
-            fileLocation.text = printableModel?.location.rawValue
+            fileType.text = printableModel?.type.asReadableString()
+            fileLocation.text = printableModel?.location.asReadableString()
             fileSize.text = printableModel?.size.asDiskSpace()
             uploadDate.text = printableModel?.upload.asFormattedDate()
         }

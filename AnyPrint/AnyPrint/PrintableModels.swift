@@ -18,11 +18,29 @@ struct PrintableModel {
 }
 
 enum PrintableModelLocation: String {
-    case local  = "Local"
-    case sdcard = "SD Card"
+    case local  = "local"
+    case sdcard = "sdcard"
+    
+    func asReadableString() -> String? {
+        switch self {
+            case .local:
+                return "Local"
+            case .sdcard:
+                return "SD Card"
+        }
+    }
 }
 
 enum PrintableModelType: String {
-    case model          = "Model"
-    case machinecode    = "Machine Code"
+    case model          = "model"
+    case machinecode    = "machinecode"
+    
+    func asReadableString() -> String? {
+        switch self {
+            case .model:
+                return "Model"
+            case .machinecode:
+                return "Machine Code"
+        }
+    }
 }
