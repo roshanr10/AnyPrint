@@ -1,0 +1,29 @@
+Beyond just showing the telemetry data of the printer being shown in realtime, the printer app has a few convenience in safety features.
+
+First and foremost, the initial configuration must be set for the app’s telemetry data and livestream to be shown. The configuration is attached and should be set up throughout the printers tab. This process is also further documented in the feature descriptions below if needed.
+
+Configuration/Credentials for Printer (needed to see actual data live):
+    Printer Name (only reflected in app): Roshan’s 3D Printer
+    Printer Host: https://3dprint.roshanravi.com
+    API Key: 134519135B4B4A19BA0746BEEFD1A65C
+    Camera Host: https://3dprint.roshanravi.com/webcam/?action=stream
+
+    Basic Authentication: Switched On
+        Username: printAnywhere
+        Password: ios_app_demo
+
+The app’s user interface consists of the following features:
+* Adding printer configurations:
+    * This can be done be clicking the plus sign in the top right on the printers tab. The credentials will then be requested. Tapping done will create the new configuration or the edits can be canceled.
+* Editing printer configurations
+    * Clicking on an existing device in the printers tab should take you back to the printer configuration page. Tapping done will change the current configuration or the edits can be canceled.
+* Deleting Printer configurations
+    * If there are at least two printer configurations, the traditional swipe-to-delete will work in the printers tab.
+* Selecting the current printer configuration
+    * When in the printer configuration page, the “select printer’ button at the bottom will make it the current printer for the app to use
+* Selecting & Printing a File
+    * After choosing a model in the files tab, there is a print button. Clicking that will immediately send the request to the printer and the results can be seen via the livestream.
+    * If a model has to be printed for grading purposes, I will appreciate if it’s a little earlier in the day since the printer does generate quite a bit of noise. Also, the other models currently stored on the disk take many hours to print, so the fish would be preferable. - Thanks for understanding!
+* Stopping/pausing a print
+    * In the control tab, there are options to either pause/stop the print. However, please note that once those are clicked, there is no option to re-enable the printer. This design choice was made for safety as a such a concern would be the primary reason for remote telemetry monitoring of the printer.
+
