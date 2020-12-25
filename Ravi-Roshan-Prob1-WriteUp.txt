@@ -5,12 +5,12 @@ First and foremost, the initial configuration must be set for the app’s teleme
 Configuration/Credentials for Printer (needed to see actual data live):
     Printer Name (only reflected in app): Roshan’s 3D Printer
     Printer Host: https://3dprint.roshanravi.com
-    API Key: 134519135B4B4A19BA0746BEEFD1A65C
+    API Key: [REDACTED]
     Camera Host: https://3dprint.roshanravi.com/webcam/?action=stream
 
     Basic Authentication: Switched On
         Username: printAnywhere
-        Password: ios_app_demo
+        Password: [REDACTED]
 
 The app’s user interface consists of the following features:
 * Adding printer configurations:
